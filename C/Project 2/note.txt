@@ -1,0 +1,1 @@
+Functions execute_command and execute_nonbuiltin should not return when there is no error or failure as instructed in comments of file shell.c. However, on the other hand, we are instructed to make sure to submit files that compiles without warnings. These two functions mentioned to give warnings as their return values are conditioned.
