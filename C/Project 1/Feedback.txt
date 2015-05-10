@@ -1,0 +1,62 @@
+Hi,
+
+The assignment is out of 40. If you have any questions, please let me know and I'll pass them on to our marking TA.
+
+Thanks!
+
+
+mem_init: 2.0
+0.  Not submitted or incorrect.
+0.5.  This criterion was partially satisfied.
+1.  This criterion was satisfied.
+1.5.  One of the allocated_list or the freelist were not initialized correctly.  (Grader should check to make sure to give students credit if they correctly use a dummy node at the beginning of the list.) 2.  Both the allocated_list and freelist were initialized correctly.  testinit passes
+2
+
+--------------------------------------------------
+smalloc: 12.0
+0.  Not submitted or incomplete.
+3.  smalloc was attempted but does not work well at all.
+6.  smalloc passes some tests.  The relevant traces are 1, 2, 4, and 6 9.  smalloc mostly works and allocates memory correctly.  There is a small problem that causes it to fail on some tests. The relevant traces are 1, 2, 4, and 6.
+12.  smalloc correctly allocates memory from the memory space.  The program passes tests with traces 1, 2, 4, and 6.
+Note: trace 6 failed
+9
+
+--------------------------------------------------
+sfree: 12.0
+0.  Not submitted or not attempted.
+3.  sfree was attempted, but doesn't work well.
+6.  sfree returns blocks to the freelist  in the most basic cases.  The relevant traces are  3.1, 3.2, 3.3, 4.1, 4.2, 5 and 6.
+9.  ! 'sfree returns blocks from the allocated list to the free list.  The program passes most of the tests: 3.1, 3.2, 3.3, 4.1, 4.2, 5 and 6.  Coalescing is not required, but is allowed.'
+12.  sfree returns blocks from the allocated list to the free list.  The program passes tests 3.1, 3.2, 3.3, 4.1, 4.2, 5 and 6.  Coalescing is not required, but is allowed.
+Note: trace 6 failed
+9
+
+--------------------------------------------------
+mem_clean: 4.0
+0.  Not submitted or not attempted.
+1.  Some attempt to free memory, but it doesn't work properly.
+2.  valgrind reports that nearly all memory is freed.
+3.  valgrind reports that all memory is freed, but pointers are used after free 4.  valgrind reports that all memory is free, free is used correctly and pointers are not used after free
+4
+
+--------------------------------------------------
+testing: 6.0
+0.  Not submitted or test program simply does not work.
+1.5.  A test program was submitted but it doesn't work well.
+3.  A test program was submitted but it doesn't work as expected, or doesn't test what the comments claim.
+4.5.  ! 'A test program was submitted, but there is some problem with it. '
+6.  a mytest program is submitted that compiles and runs correctly and illustrates an interesting test case.
+Note: interesting test case
+6
+
+--------------------------------------------------
+code quality: 4.0
+0.  Not submitted, or the quality of the code is simply not acceptable for a university-level course.
+1.  ! 'The program is not well organized and is difficult to read.  The following would make the program more readable: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+2.  ! 'The program is somewhat difficult to read.  Improvement could be made in some of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+3.  ! 'The program is mostly easy to read.  Some improvement could be made in at least one of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+4.  The program is easy to read.  Blank lines are used to separate logical blocks of code. Variable names are appropriate, and comments help guide the reader.  System call errors are checked.
+Note: Error check malloc call
+3
+
+--------------------------------------------------

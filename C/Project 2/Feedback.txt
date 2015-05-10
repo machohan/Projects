@@ -1,0 +1,79 @@
+Hi,
+
+The assignment is out of 40. If you have any questions, please let me know and I'll pass them on to our marking TA.
+
+Thanks!
+
+
+Builtin commands: 4.0
+0. Both cd and exit do not work.
+2. One of the builtin commands (exit or cd) is working, but not the other.
+4. Both cd and exit are working perfectly, or for most cases.
+
+shell should not exit when directory does not exist relative paths does not work
+
+2.5
+--------------------------------------------------
+Simple commands, no redirection: 8.0
+0. No simple commands succeed, use of fork and exec are completely incorrect.
+2. Some attempt was made to implement simple commands, yet there are major problems and most tests fail.
+4. A few simple commands succeed, but there are still some problems with roughly half of the tests.
+ 6. Most simple commands succeed, only small problems cause some to fail.
+  8.  All simple command tests pass.
+   
+
+8
+--------------------------------------------------
+Complex commands: 8.0
+0. Complex commands do not work. no attempt has been made to correctly implement pipes.
+2. Most complex commands fail, lots of problems with handling complex commands (whether recursively or otherwise), or with ensuring that the ends of the pipes are properly set.
+ 4. Complex commands work only half of the time, due to bugs, some dup2 problems, etc.
+  6.  Most complex commands succeed, but minor problems cause some others to fail.
+   8.  Complex commands are implemented fully and correctly, no problems that may cause complex commands to fail.
+    
+
+8
+--------------------------------------------------
+Redirection: 8.0
+0. Redirection was not implemented, or does not work at all.
+ 2. Redirection only works for one of (stdin, stdout, stderr).
+4. Redirection works for two of (stdin, stdout, stderr).
+6. Redirection works for all of (stdin, stdout, stderr), but forgot to close each file descriptor after dup2.
+8.  Redirection works perfectly for all 3 standard streams and file descriptors are closed properly.
+
+files are made with incorrect permissions some complex redirects fail due to permissions error
+
+5
+--------------------------------------------------
+Error handling for simple and complex commands: 4.0 0.  Does not deal with failed commands (e.g. mistyping a command name) without crashing or exiting. This applies to both simple and complex commands.
+1. Mostly fails to handle failed commands gracefully. This applies to both simple and complex commands. '
+2. Partial checking for failed commands (may work for simple commands, but not complex ones).
+3. Checking most failed commands, but misses a few cases (for example, may not work for just some specific complex command cases, due to some bugs).
+4. Deals nicely or (almost) perfectly with failed commands.
+
+A shell should not exit unless there has been critical failure.
+3.5
+--------------------------------------------------
+Handling failed system calls: 4.0
+0. No error checking for return values of system calls (e.g., fork, pipe, open, etc.). '
+1. Some error checking is done for return values, but far from adequate.
+2.  Inconsistent/partial checking for errors.
+3.  Checks most error codes, but misses one or two calls.
+4. (Almost) perfect error code checking. For example, failing to check the return code for close system calls is fine, since there's not much that can realistically be done anyway if this fails.
+
+Fail to check failure on fork call (pid2)
+3
+--------------------------------------------------
+code quality: 4.0
+0.  Not submitted, or the quality of the code is simply not acceptable for a university-level course.
+1.  ! 'The program is not well organized and is difficult to read.  The following would make the program more readable: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+2.  ! 'The program is somewhat difficult to read.  Improvement could be made in some of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+3.  ! 'The program is mostly easy to read.  Some improvement could be made in at least one of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from system calls are checked for error.'
+4.  The program is easy to read.  Blank lines are used to separate logical blocks of code. Variable names are appropriate, and comments help guide the reader.  System call errors are checked.
+
+incorrect use of open() system call.
+code could be much cleaner and easier to follow please refrain from using variables to represent integers used as exit status’
+
+2.5
+--------------------------------------------------
+32.5

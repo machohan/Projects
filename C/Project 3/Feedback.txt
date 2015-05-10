@@ -1,0 +1,82 @@
+Hi,
+
+The assignment is out of 32. If you have any questions, please let me know and I'll pass them on to our marking TA.
+
+Thanks!
+
+
+login: 4.0
+0. Not submitted, or even with the example code, a client connection could not be made.
+1. A client connection can be made, but logging in and tracking client doesn't really work.
+2. Accepts new connections and updates client data structures in the server. There are problems in how the name is read from the client, or how select is used, or how the client information is stored.
+3. Accepts new connections and updates client data structures in the server.  There may be some problem in how the name is read from the client, or how select is used, or how the client information is stored.
++++4. Accepts new connections and correctly updates client data structures in the server.  Reads the name correctly from the client.  Select is used correctly so that a read does not block if only part of the name is read.
+4/4
+
+--------------------------------------------------
+Match opponent: 4.0
+0. Not submitted or matches (games) are not made correctly.
+1. In some cases, matches between opponents work reasonably well, but there are too many problems with how they work.
+2. Matches between opponents are made, but there are some significant problems with how they are handled.
+3. Matches between opponents are made but may not be fully handled correctly.  There may be a problem with the initial set up for the match or problems with identifying opponents.
++++4. Matches between opponents are made at the right times, and are handled correctly.  The initial set up for the match is done correctly, and players are correctly identified as opponents.  If two players have just completed a match against each other, they will not be immediately matched again.
+4/4
+
+--------------------------------------------------
+Combat: 4.0
+0. Not submitted, or it was not possible to carry out combat.
+1. A game can be carried out, but most of the details of the combat were not handled well.
+2. The server manages the state of combat but there are some significant problems with one or more of the following:  receiving a menu of valid commands, handling input from a client when it is not their turn, tracking hitpoints.'
+3. The server manages the state of combat but there are some small problems with one or more of the following:  receiving a menu of valid commands, handling input from a client when it is not their turn, tracking hitpoints.'
+++-4. The server manages the state of combat correctly.  Clients receive a menu of valid commands.  Input from client is thrown away when it is not that client's turn. Tracking of hitpoints is done correctly.
+
+3.5/4
+-speaking is counted as a move when player should still be able to attack afterwards -using empty powermove counts as a move when it should not
+--------------------------------------------------
+Speaking: 4.0
+0. Not submitted, or the speak command did not work.
+1. Buffering was somewhat attempted, but did not work well at all.
+2. Buffering for the speak command was attempted, but not handled correctly.
+3. Buffering for the speak command is mostly done correctly.
++++4. Buffering for the speak command is done correctly.
+4/4
+
+--------------------------------------------------
+Dropping client: 4.0
+0. Not submitted, or client departures are not handled at all.
+1.  The departure of a client is partially handled, but some important aspects are missing.
+2. The departure of a client is handled correctly in some cases.  There are problems with some of the following: match is terminated, client fd is removed from the set monitored by select, socket is closed, client struct is removed from the set.  A client is also removed correctly on error.
+3. The departure of a client is handled correctly in most cases.  There may be problem with one of the following: match is terminated, client fd is removed from the set monitored by select, socket is closed, client struct is removed from the set.  A client is also removed correctly on error.
++++4. The departure of a client is handled correctly: match is terminated, client fd is removed from the set monitored by select, socket is closed, client struct is removed from the set.  A client is also removed correctly on error.
+4/4
+
+--------------------------------------------------
+Use of select: 4.0
+0.  Not submitted, or did not use select correctly at all 1.  Select was not really used correctly.
+2.  Some attempt was made to use select correctly, but there is a read loop or another context in which read could block.
+3.  Most reads are handled correctly and select is used properly.
++++4.  Server never blocks on any read or accept calls. Only blocks in 
++++select
+4/4
+
+--------------------------------------------------
+makefile: 4.0
+0.  Not submitted or doesn't work.
+2.  Compiles a program called battle or battleserver with no errors but with mild warnings. Defined a PORT variable in the makefile, but the definition or use may not be quite right.
+++-3. Compiles a program called battle or battleserver with no errors but with mild warnings. Defined a PORT variable in the makefile. '
+4. Compiles a program called battle or battleserver with no errors or warnings. Defined a PORT variable in the makefile.
+3.5/4
+-makefile compiles with some warnings
+
+--------------------------------------------------
+code quality: 4.0
+0.  Not submitted, or the quality of the code is simply not acceptable for a university-level course.
+1. The program is somewhat difficult to read.  Improvement could be made in some of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from systems calls are checked for error.
+2. The program is somewhat difficult to read.  Improvement could be made in some of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from systems calls are checked for error.
+3. The program is mostly easy to read.  Some improvement could be made in at least one of the following areas: using blank lines to separate logical blocks of code, choice of variable names,  appropriate comments help guide the reader, and return values from systems calls are checked for error.
+++-4.  The program is easy to read.  Blank lines are used to separate logical blocks of code. Variable names are appropriate, and comments help guide the reader.  System call errors are checked.
+4/4
+-low comment density in some areas
+
+
+31
