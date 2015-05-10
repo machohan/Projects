@@ -1,0 +1,11 @@
+Class name: File
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Write contents (always replaces)
+Add to contents (never replaces)
+Report contents
+
+Collaborators:
+

@@ -1,0 +1,18 @@
+User Stories/Cases
+As a user, I want to be able to save the normal output of a command to a file by using the ">" operator.
+As a user, I want to be able to append the normal output of a command to a file by using the ">>" operator.
+As a user, I want to be able to instruct command "ls" to recursively list all sub-directories of a given directory so I can see all components in this directory.
+As a user, I want to be able to get contents of a given URL and saved them in a file that I specify, so I can access this content locally.
+As a user, I want to be able to choose to have my most recent directories remembered and to return to them in last-saved, first-remembered order.
+As a user, I want to be able to remove a file or a directory; if I remove a directory, I want every file and directory within it to removed as well.
+As a user, I want to be able to choose to be queried about every item I remove.
+As a user, I want to be able to find a line containing regular expression in any given path to a file or directory containing files giving path as well.
+
+Functional Requirements
+-JShell can save an output of a correctly executed command to a file.
+-JShell can list all components and sub-components of a given directory. 
+-JShell can retrieve the content at a URL and save the content in a file.
+-JShell can change directory to any directory in a FileSystem. 
+-JShell can delete top most directory and make change directory to new top most entry.
+-JShell can remove a path of any file or directory and remove all components in a directory and sub-directories.
+-JShell can find occurrences of a regular expression within a given file.

@@ -1,0 +1,14 @@
+Class name: CommandCp
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure to copy files and directories to specified path.
+
+Collaborators:
+JShell
+Token
+Result
+FileSystem

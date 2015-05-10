@@ -1,0 +1,11 @@
+Class name: CommandPushd
+Parent class: Command
+Subclasses: 
+
+Responsibilities:
+-Adds most recent directory that was navigated to in the stack
+Collaborators:
+-Jshell
+-Path Exception(error Handling)
+-Enviornment
+-Token

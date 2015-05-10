@@ -1,0 +1,11 @@
+Class name: CommandRm
+Parent class: Command 
+Subclasses: 
+
+Responsibilities:
+-Removes filesystem object(file/directory) either recursively or by force is the "-f" option is given with the command
+Collaborators:
+-Jshell
+-Path Exception(error Handling)
+-Enviornment
+-Token

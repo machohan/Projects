@@ -1,0 +1,9 @@
+Class name: PathException
+Parent class: Exception
+Subclasses: None
+
+Responsibilities:
+-Carries information about exceptional condition for operations on a path
+
+Collaborators:
+-FileSystem Result Type

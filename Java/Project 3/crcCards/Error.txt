@@ -1,0 +1,7 @@
+Class name: Error
+Parent class:  Result
+Subclasses: -No
+
+Responsibilities:
+-Returns a result with an error that is specified by its class (who ever is sending it)
+Collaborators:-None

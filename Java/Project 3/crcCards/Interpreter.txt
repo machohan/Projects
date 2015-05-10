@@ -1,0 +1,15 @@
+Class name: Interpreter
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Has a commandList instance to keep track of all the commands and their syntatic format
+Accepts input from user
+Tokenize the user input
+validate user input
+Dispatches command-line arguments to correct command for execution
+Reports the result to the Jshell
+
+Collaborators:
+Token
+Result

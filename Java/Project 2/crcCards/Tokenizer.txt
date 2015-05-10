@@ -1,0 +1,9 @@
+Class name: Tokenizer
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Converts a line of input into a sequence of Tokens
+
+Collaborators:
+Token

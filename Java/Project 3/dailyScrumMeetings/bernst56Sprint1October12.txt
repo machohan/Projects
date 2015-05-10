@@ -1,0 +1,9 @@
+Yesterday: 
+Checked out project hierarchy
+Finished working prototype of JShell
+
+Today I plan to:
+Sign Honor Code (done)
+Configure GUI emacs on Mac OS for SVN
+Write brief mini-proposal for object design 
+

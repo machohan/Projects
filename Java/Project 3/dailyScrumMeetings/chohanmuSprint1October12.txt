@@ -1,0 +1,12 @@
+What did I do last time?
+	- checked out Assignment 2
+	
+What do I plan to do now?
+	- Complete Honor Code
+	- Read all read me files and take actions where needed
+	- Read GradingScheme.txt and take actions where needed
+	- Read 207Assignment2A.pdf and take actions where needed
+	- Set up the project in Eclipse
+	
+Am I blocked on anything?
+	-

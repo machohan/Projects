@@ -1,0 +1,16 @@
+What did I do last time?
+  Demo. Cobbled together some commands pre-demo, including ls
+  More code check-ins: creating a file, reading a file, writing a file
+  Improved CWD formatting
+  More JUnit tests
+  Extended design meeting.
+
+What do I plan to do now?
+  start on mv() functionality
+  bug fixing as bugs are reported
+
+Am I blocked on anything?
+  Not presently
+  
+
+

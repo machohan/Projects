@@ -1,0 +1,9 @@
+What did I do last time?
+	-Completed Implementation of ComandLs class
+	-Created a test unit for Class Token in which I tested tokeniz()
+	-Finalized JShell
+What do I plan to do now:
+	-Complete the Test Units
+	-Check progress made by team members with their respective tasks
+Am I blocked on anything?
+	no

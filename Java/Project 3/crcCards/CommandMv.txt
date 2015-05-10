@@ -1,0 +1,17 @@
+Class name: CommandMv
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure on how to move directories and files recursively in a given
+from oldpath to newpath.
+
+Collaborators:
+JShell
+Token
+Result
+File
+Directory
+FileSystem

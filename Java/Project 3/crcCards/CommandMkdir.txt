@@ -1,0 +1,18 @@
+Class name: CommandMkdir
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure of:
+-creating new directory.
+-creating multiple directories at once.
+-creating directory at given path.
+
+Collaborators:
+JShell
+Token
+Result
+Directory
+FileSystem

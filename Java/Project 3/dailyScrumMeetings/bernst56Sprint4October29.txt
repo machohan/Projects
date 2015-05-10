@@ -1,0 +1,17 @@
+What did I do last time?
+  first pass implement user-level mv
+  wrote additional test cases
+
+What do I plan to do now?
+  debug mv "null" case (cd to directory after mv shows "null" in cwd)
+  FileSystem level cp support
+  User-level cp command
+  bug fixing as reports come in
+  additional CRC cards
+  additional FileSystem features as requested
+
+Am I blocked on anything?
+  Not presently
+  
+
+

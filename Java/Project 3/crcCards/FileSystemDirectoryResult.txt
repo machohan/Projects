@@ -1,0 +1,7 @@
+Class name: FileSystemDirectoryResult
+Parent class FileSystemResult
+
+Responsibilities:
+Return a result from the FileSystem to upper layers of code,
+Upon success, includes entries from a Directory 
+

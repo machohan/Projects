@@ -1,0 +1,8 @@
+Class name: CommandGet
+Parent class: 
+Subclasses: 
+
+Responsibilities:
+
+
+Collaborators:

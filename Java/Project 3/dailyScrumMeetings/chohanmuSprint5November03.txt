@@ -1,0 +1,12 @@
+What did I do last time?
+	- Met with team to complete assignment2A to the best level.
+	- Review assignment2B requirements and Qs&As
+	- Completed ProductBacklog2 for assignment2B.
+	
+What do I plan to do now?
+	- Create sprint5 (first sprint of assignment2B)
+	- Continue to complete tests for assignment2B and clean up code with team.
+	- Start on tasks in sprint5.
+	
+Am I blocked on anything?
+	- Midterms coming up.

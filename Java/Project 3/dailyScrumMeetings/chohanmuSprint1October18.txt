@@ -1,0 +1,13 @@
+What did I do last time?
+	- Assesed CRC cards with team - Task1,
+	- Completed Product Backlog with team,
+	- Completed documenting SprintBacklog1 with team,
+	- Initaial code for File and Directory class committed to repo
+	
+What do I plan to do now?
+	- To make sure everyone is upto their tasks.
+	- Continue work on File and Directory class.
+	- Review Product Backlog functional requirements.
+	
+Am I blocked on anything?
+	- Time only.

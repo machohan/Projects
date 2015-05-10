@@ -1,0 +1,10 @@
+Class name: FileSystemResolveResult
+Parent class FileSystemResult
+
+Responsibilities:
+Return a result from the FileSystem to upper layers of code,
+Upon success, includes the Node which was found.
+
+
+Collaborators:
+Node

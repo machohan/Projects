@@ -1,0 +1,11 @@
+What did I do last time?
+	- Created and committed Sprint 3.
+	- Attended Demo.
+	- Met team and issues discussed.
+	
+What do I plan to do now?
+	- Analyze code in repo.
+	- Start on Sprint3 tasks.
+	
+Am I blocked on anything?
+	- No.

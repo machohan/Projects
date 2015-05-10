@@ -1,0 +1,17 @@
+Class name: JShell
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Initialize Filesystem
+Register Commands with Interpreter
+Read lines from user
+Dispatch lines to interpreter
+Report Results to User
+Interact with Web
+
+Collaborators:
+Filesystem
+Interpreter
+Command
+TheWeb

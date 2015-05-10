@@ -1,0 +1,14 @@
+What did I do last time?
+	- Reviewed tasks completed by other team members.
+	- Completed functionality for getURL.
+	- Wrote getName and getDocString test cases for cat and cp.
+	- Condition in CommandEcho changed to also accept command with three arguments.
+	- Tests written for commandLs and commandEcho.
+	
+What do I plan to do now?
+	- Initialize new sprint.
+	- Write tests for CommandGet.
+	- Begin tasks in sprint6.
+	
+Am I blocked on anything?
+	- Midterms coming up.

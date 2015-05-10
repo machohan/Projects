@@ -1,0 +1,7 @@
+Class name: Token
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Contains a metasymbol or a word.
+

@@ -1,0 +1,9 @@
+What did I do last time?
+	- Discussed full assignment and its working with team.
+	- Schedule A2A demo for Thursday 23rd October 5:15-5:30 DH-3024.
+	
+What do I plan to do now?
+	- Work on tasks assigned in Sprint2.
+	
+Am I blocked on anything?
+	- Require FileSystem class

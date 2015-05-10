@@ -1,0 +1,9 @@
+Class name: Success
+Parent class: Result 
+Subclasses: 
+
+Responsibilities:
+-Indicates successful result depending on command
+
+Collaborators:
+-None

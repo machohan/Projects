@@ -1,0 +1,14 @@
+Class name: CommandMan
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure on how to get java documentation of other commands.
+
+Collaborators:
+JShell
+Token
+Result
+FileSystem

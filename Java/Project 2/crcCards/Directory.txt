@@ -1,0 +1,11 @@
+Class name: Directory
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Report its children (including parent)
+Delete a child
+Add a child
+
+Collaborators:
+File

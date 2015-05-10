@@ -1,0 +1,247 @@
+Marked by Raymond Lei, Please contact yunyunsin@gmail.com if you have any questions regarding your marks.
++++ASSIGNMENT1 MARK DETAIL+++
+Your mark out of 10 is: [   8.5/10] 
+
+
+
+PART 1) +++SVN CHECKOUT ON YOUR ASSIGNMENT1+++
+A    Assignment1/crcCards
+A    Assignment1/crcCards/Tokenizer.txt
+A    Assignment1/crcCards/Command.txt
+A    Assignment1/crcCards/Result.txt
+A    Assignment1/crcCards/TheWeb.txt
+A    Assignment1/crcCards/File.txt
+A    Assignment1/crcCards/Token.txt
+A    Assignment1/crcCards/JShell.txt
+A    Assignment1/crcCards/Interpreter.txt
+A    Assignment1/crcCards/Directory.txt
+A    Assignment1/src
+A    Assignment1/src/a1
+A    Assignment1/src/a1/JShell.java
+Checked out revision 36.
+
+
+
+PART 2) +++SVN COMMIT LOGS ARE+++
+Marks Deductions here (-.5 max): 
+------------------------------------------------------------------------
+r36 | bernst56@UTORONTO.CA | 2014-10-07 18:22:10 -0400 (Tue, 07 Oct 2014) | 1 line
+
+better handling of end-of-file condition
+------------------------------------------------------------------------
+r35 | bernst56@UTORONTO.CA | 2014-10-07 17:11:23 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Added code to silently exit when we hit unexpected end of input
+------------------------------------------------------------------------
+r34 | bernst56@UTORONTO.CA | 2014-10-07 16:33:31 -0400 (Tue, 07 Oct 2014) | 2 lines
+
+Added special cases:
+echo now held to "echo foo > bar" and "echo foo >> bar"
+------------------------------------------------------------------------
+r33 | bernst56@UTORONTO.CA | 2014-10-07 16:00:15 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Enormous hand-coded Tokenizer: removed.
+------------------------------------------------------------------------
+r32 | bernst56@UTORONTO.CA | 2014-10-07 15:56:50 -0400 (Tue, 07 Oct 2014) | 1 line
+
+After team session with Ammar, we check in a much simplified tokenizing & parsing scheme.
+------------------------------------------------------------------------
+r31 | bernst56@UTORONTO.CA | 2014-10-07 14:07:16 -0400 (Tue, 07 Oct 2014) | 1 line
+
+fix spelling error
+------------------------------------------------------------------------
+r30 | chohanmu@UTORONTO.CA | 2014-10-07 11:18:38 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Adding Directory,File,Interpreter,JShell,TheWeb crcCards
+------------------------------------------------------------------------
+r29 | chohanmu@UTORONTO.CA | 2014-10-07 11:15:25 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Deleted Directory, File, Interpreter, JShell, TheWeb
+------------------------------------------------------------------------
+r28 | chohanmu@UTORONTO.CA | 2014-10-07 11:13:44 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Deleted CommandTableEntry
+------------------------------------------------------------------------
+r27 | chohanmu@UTORONTO.CA | 2014-10-07 11:11:49 -0400 (Tue, 07 Oct 2014) | 1 line
+
+updating CommandTableEntry
+------------------------------------------------------------------------
+r26 | chohanmu@UTORONTO.CA | 2014-10-07 11:08:59 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Deleted DirectoryEntry and ExecutableCommand
+------------------------------------------------------------------------
+r25 | chohanmu@UTORONTO.CA | 2014-10-07 11:07:23 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Adding crcCards
+------------------------------------------------------------------------
+r24 | chohanmu@UTORONTO.CA | 2014-10-07 10:42:15 -0400 (Tue, 07 Oct 2014) | 1 line
+
+Adding CRC cards
+------------------------------------------------------------------------
+r23 | bernst56@UTORONTO.CA | 2014-10-03 17:41:51 -0400 (Fri, 03 Oct 2014) | 1 line
+
+comment update (tokenizer)
+------------------------------------------------------------------------
+r22 | bernst56@UTORONTO.CA | 2014-10-03 15:21:14 -0400 (Fri, 03 Oct 2014) | 1 line
+
+Added comments to classes and functions in collaboration with Ammar.
+------------------------------------------------------------------------
+r21 | chohanmu@UTORONTO.CA | 2014-10-03 13:12:49 -0400 (Fri, 03 Oct 2014) | 1 line
+
+exit in work
+------------------------------------------------------------------------
+r20 | bernst56@UTORONTO.CA | 2014-10-02 20:15:12 -0400 (Thu, 02 Oct 2014) | 1 line
+
+Updated comments, some small refactoring for clarity.
+------------------------------------------------------------------------
+r19 | bernst56@UTORONTO.CA | 2014-10-02 19:56:48 -0400 (Thu, 02 Oct 2014) | 1 line
+
+Assignment1 functionality, first pass.
+------------------------------------------------------------------------
+r18 | bernst56@UTORONTO.CA | 2014-10-01 22:19:19 -0400 (Wed, 01 Oct 2014) | 1 line
+
+Fixed bug in handling of >>>> -- it now produces two APPENDTO tokens instead of APPENDTO WRITETO
+------------------------------------------------------------------------
+r17 | bernst56@UTORONTO.CA | 2014-10-01 22:14:04 -0400 (Wed, 01 Oct 2014) | 1 line
+
+Mostly functional tokenizer.
+------------------------------------------------------------------------
+r16 | bernst56@UTORONTO.CA | 2014-10-01 20:43:09 -0400 (Wed, 01 Oct 2014) | 2 lines
+
+huge tokenizer written (but not tested, much less used)
+plus basic regex-based command evaluation with debugging code.
+------------------------------------------------------------------------
+r15 | bernst56@UTORONTO.CA | 2014-10-01 18:30:48 -0400 (Wed, 01 Oct 2014) | 1 line
+
+Updated to reflect responsibilities & clearer hierarchy
+------------------------------------------------------------------------
+r14 | bernst56@UTORONTO.CA | 2014-09-30 13:21:02 -0400 (Tue, 30 Sep 2014) | 1 line
+
+Made "exit" work by matching to the string.
+------------------------------------------------------------------------
+r13 | bernst56@UTORONTO.CA | 2014-09-30 13:04:22 -0400 (Tue, 30 Sep 2014) | 1 line
+
+Very basic debugging version of read-print loop for interpreter
+------------------------------------------------------------------------
+r12 | bernst56@UTORONTO.CA | 2014-09-30 12:14:51 -0400 (Tue, 30 Sep 2014) | 1 line
+
+compiling, untested first draft of shell loop
+------------------------------------------------------------------------
+r11 | chohanmu@UTORONTO.CA | 2014-09-29 21:33:34 -0400 (Mon, 29 Sep 2014) | 1 line
+
+updating reponsibilities of all crcCards
+------------------------------------------------------------------------
+r10 | chohanmu@UTORONTO.CA | 2014-09-29 21:19:55 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Updating reponsibilities in File.txt
+------------------------------------------------------------------------
+r9 | chohanmu@UTORONTO.CA | 2014-09-29 21:13:32 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Updating reponsibilities in DirectoryEntry.txt
+------------------------------------------------------------------------
+r8 | chohanmu@UTORONTO.CA | 2014-09-29 21:12:12 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Updating reponsibilities in Directory.txt
+------------------------------------------------------------------------
+r7 | chohanmu@UTORONTO.CA | 2014-09-29 20:32:57 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Adding Directory crcCard
+------------------------------------------------------------------------
+r6 | chohanmu@UTORONTO.CA | 2014-09-29 20:30:38 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Honor code signed Ammar
+------------------------------------------------------------------------
+r5 | chohanmu@UTORONTO.CA | 2014-09-29 20:28:08 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Adding structure to crc text files
+------------------------------------------------------------------------
+r4 | chohanmu@UTORONTO.CA | 2014-09-29 19:37:15 -0400 (Mon, 29 Sep 2014) | 1 line
+
+Adding crcCards
+------------------------------------------------------------------------
+r3 | bernst56@UTORONTO.CA | 2014-09-29 17:07:41 -0400 (Mon, 29 Sep 2014) | 1 line
+
+filled out authorship/honor code
+------------------------------------------------------------------------
+r2 | attarwal@UTORONTO.CA | 2014-09-28 21:15:15 -0400 (Sun, 28 Sep 2014) | 1 line
+
+Adding Assignment1 by instructor
+------------------------------------------------------------------------
+r1 | attarwal@UTORONTO.CA | 2014-09-28 21:15:13 -0400 (Sun, 28 Sep 2014) | 1 line
+
+Adding Assignment1 by instructor
+------------------------------------------------------------------------
+
+
+
+Part 3) +++Work Distribution of Team Members+++
+On JShell.java
+     19 attarwal@U
+    211 bernst56@U
+      5 chohanmu@U
+On CRC Cards
+      4 bernst56@U
+    102 chohanmu@U
+
+
+
+PART 3) +++FOLLOWING LINES ARE GREATER THAN 80 CHARACTERS+++
+Marks Deductions here (-.5 max): 
+
+
+
+PART 4) +++HONOR CODE?+++
+Marks Deductions here (-1 max): 
+// **********************************************************
+// Assignment1:
+// UTOR1 user_name: bernst56
+// UT1 Student #: 1002029672
+// Author1: Michael William Bernstein
+//
+// UTOR2 user_name: chohanmu
+// UT2 Student #: 1002008105
+// Author2: Muhammad Ammar Chohan
+//
+//
+// Honor Code: I pledge that this program represents my own
+// program code and that I have coded on my own. I received
+// help from no one in designing and debugging my program.
+
+
+
+PART 5) +++IDE FILES+++
+Marks Deductions here (-.5 max): 
+Good!, You have no IDE files into your SVN repository
+
+
+
+PART 6) +++COMMENTS IN JShell.java
+Marks Deductions here (-.5 max): 
+
+
+
+PART 7) +++COMPILING YOUR CODE+++
+Marks Deductions here(-3 max): 
+
+
+
+Part 8) +++RUNNING YOUR CODE+++
+Marks Deductions here (-.2 for each failed test case): 
+
+
+TestCase1: mkdir                   xyz
+TestCase2: xyz abc
+TestCase3: cd dir1 dir2
+TestCase4: ls   
+TestCase5: mv dir1
+Expected Output:
+Actual Output:
+
+
+Actual Output from your program:
+
+
+
+PART 9) +++CRC Cards+++
+Marks Deductions here (-7 max): -1.5
+Feedback from TA is the following: Need an extra layer of abstraction for all commands. Command checking may be done in separate individual classes to increase extensibility. Missing operation validators.

@@ -1,0 +1,23 @@
+What did I do last time?
+  Huge code push for A2A including:
+  -- finishing CP
+  -- writing many JUnit tests
+  -- fixing Tokenizer
+  -- Debugging
+  -- updating docStrings
+  -- updating CRC cards
+  Beginning of Sprint5:
+  -- Preliminary design ideas to team
+  -- Prototyping of the Path class
+  -- Prototyping of Redirection
+  -- fleshing out Sprint5 tasks
+
+What do I plan to do now?
+  finish universal redirection (first pass)
+  write more JUnit tests
+
+Am I blocked on anything?
+  Nope.
+  
+
+

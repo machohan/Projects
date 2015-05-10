@@ -1,0 +1,12 @@
+What did I do last time?
+	-I applied some finishing touches to the functional requirements and user stories in the backlog file
+	-I participated in meeting where the CRC cards where finalized and further code design prospects where descussed
+	
+What do I plan to do now?
+	-Complete Honor code
+	-Complete the JShell and Token classes
+	-coordinate with the team members to finalize program design and code structure 
+
+Am I blocked on anything?
+	- Will be needing the following classes: Node, FileNode, DirectoryNode, interpreter to fulfill the coding requirements for 
+	  JShell.Java 

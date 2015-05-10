@@ -1,0 +1,15 @@
+What did I do last time?
+  Resolved tokenization question
+  Implemented CommandGrep, recursive and otherwise
+  Sketched out and began prototyping for streams proposal
+  Got streams question answered by Abbas
+
+What do I plan to do now?
+  Finish streams proposal
+  Build streams proposal
+  JUnit testing
+  Streams refactoring
+
+Am I blocked on anything?
+  Not currently blocked.
+

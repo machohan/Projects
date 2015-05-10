@@ -1,0 +1,11 @@
+Abstract Class name: Node 
+
+Responsibilities:
+Accept a name upon creation
+Accept a name change
+Report its name when asked
+
+Collaborators:
+File
+FileSystem
+Directory

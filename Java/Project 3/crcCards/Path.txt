@@ -1,0 +1,14 @@
+Class name: Path
+Parent class: None
+Subclasses: None
+
+Responsibilities:
+-Layer over the filesystem that provides many methods such as deleting, creating, testing for existing, test for type, 
+moves from complex return type to an exception model. 
+
+Collaborators:
+-FileSystem
+-Node
+-Path Exception(error Handling)
+-Directory
+-File

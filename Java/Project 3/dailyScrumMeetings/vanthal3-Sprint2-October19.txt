@@ -1,0 +1,10 @@
+What did I do last time?
+	- Assesed CRC cards with team - Task1
+	- Completed documenting SprintBacklog1 with team
+	
+What do I plan to do now?
+	- Finish class man 
+	- Review Product Backlog functional requirements.
+	
+Am I blocked on anything?
+	- waiting on treesystem

@@ -1,0 +1,13 @@
+What did I do last time?
+	- Met with team.
+	- Sprint6 Initialized and tasks distributed.
+	- Completed assigned tasks on sprint5.
+	- Met with team to discuss assignment and requirements.
+	
+What do I plan to do now?
+	- Write tests for CommandGet and write JavaDoc for CommandGet.
+	- Begin on Sprint6 tasks.
+	- To meet with team on Tuesday 11th Nov.
+	
+Am I blocked on anything?
+	- None.

@@ -1,0 +1,16 @@
+What did I do last time?
+  Signed up for Sprint6 tasks.
+  Completed Sprint6 tasks:
+  --(a-2, b-2) provided a stack in the JShell class
+  --(c-2) wrote code to remove a given file/dir (in FileSystem & Path)
+  Nightly JUnit runs to annoy (I mean, help) team-mates.
+
+What do I plan to do now?
+  Write some more tests, support team-mates
+  Investigate automated JUnit run/summary.
+
+Am I blocked on anything?
+  Not currently blocked.
+  
+
+

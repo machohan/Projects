@@ -1,0 +1,14 @@
+Class name: CommandGrep
+Parent class: Command
+Subclasses: 
+
+Responsibilities:
+-Returns the lines that contain a match for a regular expression
+
+Collaborators:
+-Jshell
+-FileSystem
+-Enviornemnt
+-Pass
+-Path Exception (for error handling)
+

@@ -1,0 +1,14 @@
+Class name: Interpreter
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Keeps track of commands and their syntax
+Accepts input from user
+Checks syntax of command
+Dispatches command-line arguments to correct command for execution
+Reports the result to the user
+
+Collaborators:
+JShell
+Result

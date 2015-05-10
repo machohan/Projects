@@ -1,0 +1,13 @@
+What did I do last time?
+-edited reviewed man and cat
+
+
+What do I plan to do now?
+  complete cat 
+  complete man
+  add testcases
+  add docstrings where needed
+
+Am I blocked on anything?
+-my file was not getting committed for somereason
+  

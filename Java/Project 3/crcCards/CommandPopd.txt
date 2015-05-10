@@ -1,0 +1,12 @@
+Class name: CommandPopd
+Parent class: Command
+Subclasses: -None
+
+Responsibilities:
+-Removes the most recent entry in the stack (most recent directory)
+-It navigates to it as well
+Collaborators:
+-Jshell
+-Path Exception(error Handling)
+-Enviornment
+-Token

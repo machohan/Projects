@@ -1,0 +1,39 @@
+//Sprint 4 Backlog.  
+October 27 to October 31
+
+Product Backlog items to be implemented:
+a) Implement feature to give user path of their present working directory. (Carried Over)
+b) Implement feature to allow user to move a file/directory from one location to another. (Carried Over)
+c) Implement feature to allow user to copy a file/directory from one location to another. (Carried Over)
+d) Implement feature to allow user to view contents of a file. (Carried Over)
+e) Implement feature to inform user what a command does. (Carried Over)
+
+
+Specific tasks to be accomplished:
+a-1. Write code so .. should not appear in list when ls command is successfully executed.
+a-2. Change cd command error message so that it also gives suitable message if user is trying to change directory to file.(i.e cd /folder1/folder2/file1.txt).
+b-1. Edit code so ls command list files as well as directories in a directory.
+b-2. Edit code to delete empty line between two prompts.
+c-1. Edit code to make ls command work correctly for given path.
+c-2. Implement pwd command.
+e-1. Implement mv command.
+e-2. Implement cp command.
+f-1. Implement cat command.
+f-2. Complete documentation for each command in their own class for successful execution of man command.
+h-1. Complete tests cases.
+h-2. Rewrite CRC cards.
+
+
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks: f-1, f-2,h-1
+
+User: Ammar
+Tasks: a-1,a-2,b-2,c-2,h-1
+
+User: Basel
+Tasks: b-1,c-1,h-1
+
+User: Michael
+Tasks: e-1,e-2,h-1

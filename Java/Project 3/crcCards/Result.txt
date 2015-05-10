@@ -1,0 +1,6 @@
+Class name: Result
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Contains a result to be conveyed to the user

@@ -1,0 +1,7 @@
+Class name: FileSystemStringResult
+Parent class FileSystemResult
+
+Responsibilities:
+Return a result from the FileSystem to upper layers of code,
+Upon success, includes string data retrieved
+

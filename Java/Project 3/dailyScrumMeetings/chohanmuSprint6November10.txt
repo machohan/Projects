@@ -1,0 +1,13 @@
+What did I do last time?
+	- Reviewed all tests for all commands.
+	- CommandPushD implemented.
+	- DocString written for commands that were missing.
+	- Exit command execution modified to give error where arguments are given.
+	
+What do I plan to do now?
+	- To meet with team on Tuesday 11th Nov.
+	- Review what is done by other team members.
+	- Make sure all tests are working.
+	
+Am I blocked on anything?
+	- Preparation for midterm and finals.

@@ -1,0 +1,8 @@
+What I did today:
+Experimented with Class Node and FileSystem
+
+To do for tomorrow and next few days:
+try to construct tree for filesystem
+
+Blocked on:
+Starter Code before we can check to see if the commands work

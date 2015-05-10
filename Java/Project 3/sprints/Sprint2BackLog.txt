@@ -1,0 +1,52 @@
+//Sprint 2 Backlog.  
+October 19 to October 22
+
+Product Backlog items to be implemented:
+a) Implement exit command.
+b) Implement feature to allow user create multiple directories.
+c) Implement feature to allow user to change current working directory.
+d) Implement feature of to give user path of their present working directory.
+e) Implement feature to allow user list contents of user current working directory.
+f) Implement feature to allow user list contents of location given by user.
+g) Implement feature to allow user to move a file from one location to another.
+h) Implement feature to allow user to copy a file from one location to another.
+i) Implement feature to allow user to view contents of a file.
+j) Implement feature to allow user to replace present content of a file with some text.
+k) Implement feature to allow user to add or append to present content of a file.
+l) Implement feature to inform user what a command does.
+m) Implement feature to omit unnecessary white spaces.
+
+Specific tasks to be accomplished:
+a-1. Further work on Directory class to implement function to create multiple directories and multiple directories at once.
+a-2. Implement function to keep track of user current working directory, directories and files.
+b-1. Further work on File class so that both echo commands execute properly.
+b-2. Create Node class.
+c-1. Create Token class to get user input and tokenize them.
+c-2. Create Interpreter class that interpret user input and return if command is acceptable or unacceptable.
+d-1. Create command class.
+d-2. Create class to implement exit command that extend Command class.
+e-1. Create class to implement cd command that extend Command class.
+e-2. Create class to implement pwd command that extend Command class.
+f-1. Create class to implement ls command that extend Command class.
+f-2. Create class to implement mv command that extend Command class.
+g-1. Create class to implement cp command that extend Command class.
+g-2. Create class to implement cat command that extend Command class.
+h-1. Create class to implement echo command that extend Command class.
+h-2. Create class to implement echo command that extend Command class.
+i-1. Create class to implement man command that extend Command class.
+i-2. Write main function in JShell.java
+j-1. Create class so that result can be present to user.
+
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks: f-2, g-2, i-1
+
+User: Ammar
+Tasks: d-2, e-1, e-2, f-1, g-1, h-2
+
+User: Basel
+Tasks: c-1, c-2, d-1, h-1, i-2, j-1
+
+User: Michael
+Tasks: a-1, a-2, b-1, b-2

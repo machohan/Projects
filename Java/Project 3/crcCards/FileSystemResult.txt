@@ -1,0 +1,8 @@
+Class name: FileSystemResult
+Parent class --
+
+Responsibilities:
+Return a result from the FileSystem to upper layers of code,
+communicating not only success but the specific sort of failure.
+
+

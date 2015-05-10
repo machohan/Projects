@@ -1,0 +1,14 @@
+Class name: CommandCat
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own doc string.
+Knows procedure of how to present text to the user from a file.
+
+Collaborators:
+JShell
+Token
+Result
+FileSystem

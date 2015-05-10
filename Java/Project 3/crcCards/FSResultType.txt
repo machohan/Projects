@@ -1,0 +1,6 @@
+Class name: FSResultType
+Parent class 
+
+Responsibilities:
+Enumerate success and specific error conditions.
+

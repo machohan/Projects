@@ -1,0 +1,14 @@
+Class name: CommandExit
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure of to terminate a program.
+
+Collaborators:
+JShell
+Token
+Result
+FileSystem

@@ -1,0 +1,12 @@
+What did I do last time?
+	- Finished command man testcases.
+	- Review assignment2B requirements and Qs&As
+	
+	
+What do I plan to do now?
+	- Continue to complete tests for assignment2B and clean up code with team.
+	- Start in new command 
+
+	
+Am I blocked on anything?
+	- timeee

@@ -1,0 +1,36 @@
+ //Sprint 8 Backlog.  
+November 14 to November 15
+
+Product Backlog items to be implemented:
+a) Implement user requirement of removing (recursively) file or directory in given list of paths. (Carried over from Sprint6)
+b) Implement feature to find a line containing regular expression in any given valid path. (Carried over from Sprint6)
+
+Specific tasks to be accomplished:
+a-1. Write test cases for CommandPopD.
+b-1. Write code to recursively remove all files and directories in given path(s).
+b-2. Write test cases for CommandRmPath.
+c-1. Initialize CommandGrep.
+c-2. Write code to get line containing regex in a file.
+c-3. Write code to recursively get all lines containing regex in all files of path that revolves to directory.
+c-4. Write code to get path of file containing regex.
+c-5. Write test cases for CommandGrep.
+d-1. Review, Rewrite and complete CRC cards.
+d-2. Insert comments for all coding.
+d-3. Prepare and complete javaDoc for classes(methods and variables).
+d-4. Make sure to have @param and @return tags.
+d-5. Make sure 80 characters limit is followed in all code files.
+d-6. Make sure no long methods(30+ lines) exists.
+	 	
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks: a-4, d-1
+
+User: Ammar
+Tasks: d-5, d-1
+
+User: Basel
+Tasks: b-1, b-2, d-1
+
+User: Michael
+Tasks: c-1, c-2, c-3, c-4, c-5, d-1

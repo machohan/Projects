@@ -1,0 +1,13 @@
+What did I do last time?
+  File, Directory, FileSystem: JUnit Test cases
+  Path resoltution, mkdir(), getGwd(), setCwd()
+  Error reporting classes 
+  Begin documenting code
+
+What do I plan to do now?
+  ls() or some version thereof
+
+Am I blocked on anything?
+  design decisions: communicating with JShell
+
+

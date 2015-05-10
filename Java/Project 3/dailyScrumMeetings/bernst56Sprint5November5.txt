@@ -1,0 +1,14 @@
+What did I do last time?
+  finished universal redirection (b-1 through b-3)
+  built or fleshed out tests for CommandCat, CommandCd, CommandCp (a1-a3)
+  made ls recursive when requested (ls -r/-R) (c1, c2)
+  found and fixed loop directory problem on cp 
+  
+What do I plan to do now?
+  Sign up for tasks for Sprint6
+
+Am I blocked on anything?
+  Nope.
+  
+
+

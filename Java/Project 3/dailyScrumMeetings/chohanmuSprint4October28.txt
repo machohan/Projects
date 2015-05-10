@@ -1,0 +1,13 @@
+What did I do last time?
+	- Created Sprint4
+	- Sprint3 Finished. Some tasks completed from Sprint4.
+	- Updated CRC cards for all commands classes.
+	- Updated Team about current issues and tasks left to do.
+	
+What do I plan to do now?
+	- Continue on Sprint4 tasks.
+	- Continue to test JShell to make sure it works are required.
+	- Review assignment requirements and update team where necessary.
+	
+Am I blocked on anything?
+	- No.

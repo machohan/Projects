@@ -1,0 +1,12 @@
+What did I do last time?
+	- Met with team members to refactor and reorganize packages.
+	- CommandPopd implemented.
+	- Documented Sprint7Backlog.
+	
+What do I plan to do now?
+	- Code cleanup.
+	- Complete javaDoc
+	- Input comments in code.
+	
+Am I blocked on anything?
+	- Preparation for midterm and finals.

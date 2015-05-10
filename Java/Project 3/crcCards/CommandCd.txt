@@ -1,0 +1,14 @@
+Class name: CommandCd
+Parent class: Command
+Subclasses: --
+
+Responsibilities:
+Knows its own command name.
+Knows its own java documentation.
+Knows procedure to allow user change current working directory.
+
+Collaborators:
+JShell
+Token
+Result
+FileSystem

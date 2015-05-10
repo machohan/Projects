@@ -1,0 +1,11 @@
+Class name: File Node 
+Parent class Node
+
+Responsibilities:
+Write contents (always replaces)
+Add to contents (never replaces)
+Report contents
+
+Collaborators:
+FileSystem
+

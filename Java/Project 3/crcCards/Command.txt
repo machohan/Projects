@@ -1,0 +1,14 @@
+Class name: Command
+Parent class: --
+Subclasses: CommandCat, CommandCd, CommandCp, CommandEcho, CommandExit,
+CommandLs, CommandMan, CommandMkdir, CommandMv, CommandPwd
+
+Responsibilities:
+Provides execution method for subclasses.
+Provides a method to get name of each command.
+Provides a method to construct doc string for each command.
+
+Collaborators:
+JShell
+Token
+Result

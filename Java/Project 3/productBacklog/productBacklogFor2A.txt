@@ -1,0 +1,27 @@
+User Stories/Cases
+As a user, I should be able to exit.
+As a user, I should be able to make directories.
+As a user, I should be able to make multiple directories at once.
+As a user, I should be able to change my current working directory (CWD).
+As a user, when my PWD is "/", typing "cd .." leaves me in "/".
+As a user, I should be able to see contents of my current working directory.
+As a user, given a location, I should be able to get contents of a directory.
+As a user, I want to know location of current working directory.
+As a user, I should be able to move a file from one location to another.
+As a user, I should be able to copy a file from one location to another.
+As a user, I should be able view contents of a file.
+As a user, I should be able to replace present content of a file with some text.
+As a user, I should be able to add or append to present content of a file.
+As a user, I should be able to know what command does.
+As a user, I should not have to worry about the number of white spaces between the command name and its first argument, 
+or between the arguments of a command 
+
+Functional Requirements
+-JShell doesn't crash or terminate and runs for as long as the exit command isn't issued
+-JShell can create one or more directories at once 
+-JShell can navigate through a directory tree constructed from a single root parent directory
+-JShell can list the content of a directory 
+-JShell can print the content of a file to the screen
+-JShell can both copy a file and move it from one directory to another in the directory tree
+-JShell can both overwrite the content of a file and append to it 
+-JShell always knows its present working directory

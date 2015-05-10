@@ -1,0 +1,9 @@
+What did I do last time?
+	- Continued working on File and Directory classes
+	
+What do I plan to do now?
+	- Start on Sprint 2
+	- Select time for Demo
+	
+Am I blocked on anything?
+	- Sprint 2 needs to be documented

@@ -1,0 +1,11 @@
+What did I do last time?
+  Coded Node, File, Directory (first pass)
+  Wrote skeletal FileSystem
+  pair-integration with Basel to get existing code base working
+
+What do I plan to do now?
+  Code FileSystem, start testing
+
+Am I blocked on anything?
+   Small block on SVN repository structure
+

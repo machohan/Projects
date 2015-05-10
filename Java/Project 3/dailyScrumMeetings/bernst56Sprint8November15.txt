@@ -1,0 +1,15 @@
+What did I do last time?
+  Finished streams (Environment) proposal, presented to group
+  Refactored cp to use Path
+  Built Environment. Includes Builder pattern.
+  Refactored entire codebase to use the Environment class.
+  Code cleanup. Lots of cleanup. Also package tidy.
+  JUnit creation and across-the-board strengthening.
+  Junk food consumption.
+
+What do I plan to do now?
+  Prep for A3.
+
+Am I blocked on anything?
+  Not currently blocked.
+

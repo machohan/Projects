@@ -1,0 +1,11 @@
+What did I do last time?
+	- Reviewed code written by team members.
+	- CRC cards written with team.
+	- Tests re-written.
+	- Commands re-factored.
+	
+What do I plan to do now?
+	- Code clean up.
+	
+Am I blocked on anything?
+	- Preparation for midterm and finals.

@@ -1,0 +1,13 @@
+Class name: Command(Abstract)
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Report its signature(syntax and list of arguments)
+Execute - Perform its function in a JShell's contect
+Report the error or other result of execution
+
+Collaborators:
+JShell
+Token
+Result

@@ -1,0 +1,17 @@
+What did I do last time?
+  Massive refactor of package namespace, much fighting with Eclipse
+  Added Error and Success, subclasses of Result
+  Sketched out CommandGrep (task c, partially completed)
+  re-wrote failing tests for CommandMan (task d)
+
+What do I plan to do now?
+  Continued work on CommandGrep
+  Plan refactor of Error reporting to allow stderr/stdout streams
+  Plan possible refactor of tokenization
+
+Am I blocked on anything?
+  Tokenization question: Abbas
+
+  
+
+

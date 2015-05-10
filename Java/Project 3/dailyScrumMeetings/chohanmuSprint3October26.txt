@@ -1,0 +1,11 @@
+What did I do last time?
+	- Email sent to Team with list of tasks left to do.
+	- Wrote a code for error dealing and fixed bugs in JShell, CommandMkdir and Interpreter.
+	- Some code, design and organization of code discussed over the email.
+	
+What do I plan to do now?
+	- Create Sprint 4.
+	- Continue on Sprint3 tasks and start on Sprint4.
+	
+Am I blocked on anything?
+	- No.

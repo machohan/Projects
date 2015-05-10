@@ -1,0 +1,15 @@
+Class name: Directory Node 
+Parent class Node 
+
+Responsibilities:
+Keep a list of references to files and directories by name
+Delete the reference to a single file or directory by name
+Add a reference to a single file or directory by name
+Report the names of all the files/directories it has
+Look up a single file or directory by name
+Look up a single file or directory by node (internal reference)
+
+Collaborators:
+FSResultType
+File
+

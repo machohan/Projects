@@ -1,0 +1,46 @@
+//Sprint 5 Backlog.  
+November 02 to November 05
+
+Product Backlog items to be implemented:
+a) Implement tests for all Commands (carryover from A2A)
+b) Implement feature to make success output of command to be saved in a file.
+c) Implement feature to recursively list all components of a cwd or path that resolves to a directory.
+d) Implement feature to get contents from given URL and save in a file.
+
+Specific tasks to be accomplished:
+a-1. Tests for CommandCat: testGetName (or remove test); more tests
+a-2. Tests for CommandCd: more tests
+a-3. Tests for CommandCp. WRITE ALL TESTS.
+a-4. Tests for CommandEcho. Test doesn't need directory structure setup.
+a-5. Tests for CommandLs. More test cases, including recursion.
+a-6. Tests for CommandMkdir. WRITE ALL TESTS.
+a-7. Tests for CommandMv. Test that directory actually moved, etc. 
+a-8. Tests for CommandRm. Make sure both the recursive and non-recursive versions work
+a-9. Tests for CommandGet. Test parsing, retrieval of known URL, etc.
+b-1. Modify Interpreter to identify and syntax-check redirection (use Token?)
+b-2. Modify Interpreter to open files, check errors, write output.
+b-3. Remove redirection from Echo command.
+c-1. add option-parsing to ls
+c-2. add recursion to ls
+d-1. Create Get Command
+d-2. Get command retrieves URL
+d-3. Get command writes URL contents to correctly-named file.
+e-1. Create pushd DIR command
+e-2. Create popd 
+e-3. Create rm command 
+e-4. Create grep 
+
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks:a-8, a-7, a-9, e-2
+
+User: Ammar
+Tasks: a-4,a-5,d-1,d-2,d-3
+
+User: Basel
+Tasks: e-3,a-8,e-4
+
+User: Michael
+Tasks: b-1,b-2,b-3,a-1,a-2,a-3, c-1, c-2
+

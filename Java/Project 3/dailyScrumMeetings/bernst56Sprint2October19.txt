@@ -1,0 +1,9 @@
+What did I do last time?
+  Wrote email proposal for my next work chunk
+
+What do I plan to do now?
+  Start sketching out Filesystem, Node, File, Directory
+
+Am I blocked on anything?
+  Email wait on work chunk proposal
+

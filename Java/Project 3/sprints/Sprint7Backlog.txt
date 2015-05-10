@@ -1,0 +1,35 @@
+ //Sprint 7 Backlog.  
+November 10 to November 13
+
+Product Backlog items to be implemented:
+a) Implement user requirement of removing top directory and making next top directory current working directory. (Carried over from Sprint6)
+b) Implement user requirement of removing (recursively) file or directory in given list of paths. (Carried over from Sprint6)
+c) Implement feature to find a line containing regular expression in any given valid path. (Carried over from Sprint6)
+
+Specific tasks to be accomplished:
+a-1. Initialize CommandPopD. 
+a-2. Write code to remove latest entry in LIFO order [In JShell]
+a-3. Write code Make popped entry CWD.
+a-4. Write test cases for CommandPopD.
+b-1. Write code to recursively remove all files and directories in given path(s).
+b-2. Write test cases for CommandRmPath.
+c-1. Initialize CommandGrep.
+c-2. Write code to get line containing regex in a file.
+c-3. Write code to recursively get all lines containing regex in all files of path that revolves to directory.
+c-4. Write code to get path of file containing regex.
+c-5. Write test cases for CommandGrep.
+d-1. Rewrite failed tests for CommandMan.
+	 	
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks: a-4
+
+User: Ammar
+Tasks: a-1, a-3
+
+User: Basel
+Tasks: b-1, b-2
+
+User: Michael
+Tasks: c-1, c-2, c-3, c-4, c-5, d-1

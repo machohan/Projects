@@ -1,0 +1,41 @@
+//Sprint 3 Backlog.  
+October 23 to October 26
+
+Product Backlog items to be implemented:
+a) Implement feature to allow user create multiple directories. (Carried Over)
+b) Implement feature to allow user to change current working directory. (Carried Over)
+c) Implement feature to give user path of their present working directory.(Carried Over)
+d) Implement feature to allow user list contents of user current working directory. (Carried Over)
+e) Implement feature to allow user to move a file from one location to another.(Carried Over)
+f) Implement feature to allow user to copy a file from one location to another.(Carried Over)
+g) Implement feature to allow user to view contents of a file. (Carried Over)
+h) Implement feature to allow user to replace present content of a file with some text. (Carried Over)
+i) Implement feature to allow user to add or append to present content of a file. (Carried Over)
+j) Implement feature to inform user what a command does. (Carried Over)
+
+Specific tasks to be accomplished:
+a-1. Modify executing mkdir command to allow user create more directories at once.
+a-2. Modify code in cd command to fix bugs.
+b-1. Make fixes to pwd command.
+b-2. Fix bugs in executing ls command.
+c-1. Write underling functionality to allow move command execution.
+c-2. Write a class that extends to command to execute copy command.
+d-1. Write a class to execute cat command.
+d-2. Continue on to make echo overwrite command work.
+e-1. Write class to make echo append command work.
+e-2. Continue to write javaDoc for each command in its on class function.
+f-1. Append Token class to implement more commands.
+
+These tasks are assigned as follows:
+
+User: Hanifa
+Tasks: d-1, e-2
+
+User: Ammar
+Tasks: a-2,b-1,b-2 
+
+User: Basel
+Tasks: f-1
+
+User: Michael
+Tasks: a-1,c-1,c-2,d-2,e-1

@@ -1,0 +1,23 @@
+Class name: FileSystem
+Parent class (if any): 
+Subclasses (if any):
+
+Responsibilities:
+Provide a layer between user-level commands (like ls) issued by the user
+and the lowest level File and Directory objects. Specifically:
+-make directories
+-move directories
+-resolve paths (strings) to nodes (File or Directory)
+-maintain the tree structure of directories, including loop detection
+-make, update, and retrieve files
+-report the contents of directories
+-report errors (e.g. File Not Found)
+
+Collaborators:
+File
+Directory
+FileSystemResult
+FileSystemResolveResult
+FileSystemStringResult
+FileSystemDirectoryResult
+
