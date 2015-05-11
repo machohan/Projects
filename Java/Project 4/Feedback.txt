@@ -1,0 +1,315 @@
+Your mark out of 10 is = 10.0/10.0
+
+=====================================================
+
+PART 1) +++SVN CHECKOUT ON YOUR ASSIGNMENT3+++
+A    marks/chohanmu/sample1.html
+A    marks/chohanmu/sample2_files
+A    marks/chohanmu/sample2_files/green_ghost.jpg
+A    marks/chohanmu/sample2_files/chart
+A    marks/chohanmu/sample2_files/scholar_logo_md_2011.gif
+A    marks/chohanmu/sample2.html
+A    marks/chohanmu/src
+A    marks/chohanmu/src/driver
+A    marks/chohanmu/src/driver/MyParser.java
+A    marks/chohanmu/src/test
+A    marks/chohanmu/src/test/CodeExtractorTest.java
+A    marks/chohanmu/src/test/CoAuthorsNamesExtractorTest.java
+A    marks/chohanmu/src/test/TotalCoAuthorsExtractorTest.java
+A    marks/chohanmu/src/test/PublicationsExtractorTest.java
+A    marks/chohanmu/src/test/NumCitationsExtractorTest.java
+A    marks/chohanmu/src/test/ExtractorTest.java
+A    marks/chohanmu/src/test/TotalCitationsExtractorTest.java
+A    marks/chohanmu/src/test/AuthorNameExtractorTest.java
+A    marks/chohanmu/src/test/PresentorTest.java
+A    marks/chohanmu/src/test/MyParserTest.java
+A    marks/chohanmu/src/test/ITenIndexExtractorTest.java
+A    marks/chohanmu/src/source
+A    marks/chohanmu/src/source/CodeExtractor.java
+A    marks/chohanmu/src/source/CoAuthorsNamesExtractor.java
+A    marks/chohanmu/src/source/TotalCoAuthorsExtractor.java
+A    marks/chohanmu/src/source/PublicationsExtractor.java
+A    marks/chohanmu/src/source/NumCitationsExtractor.java
+A    marks/chohanmu/src/source/Extractor.java
+A    marks/chohanmu/src/source/TotalCitationsExtractor.java
+A    marks/chohanmu/src/source/AuthorNameExtractor.java
+A    marks/chohanmu/src/source/Presentor.java
+A    marks/chohanmu/src/source/ITenIndexExtractor.java
+A    marks/chohanmu/sample1_files
+A    marks/chohanmu/sample1_files/citations
+A    marks/chohanmu/sample1_files/chart
+A    marks/chohanmu/sample1_files/scholar_logo_md_2011.gif
+Checked out revision 69.
+
+
+
+
+PART 2) +++SVN COMMIT LOGS ON src+++
+------------------------------------------------------------------------
+r69 | chohanmu@UTORONTO.CA | 2014-11-23 03:24:35 -0500 (Sun, 23 Nov 2014) | 1 line
+
+feature to write to a file implemented.
+------------------------------------------------------------------------
+r68 | chohanmu@UTORONTO.CA | 2014-11-23 02:04:01 -0500 (Sun, 23 Nov 2014) | 1 line
+
+unnecessary imports deleted.
+------------------------------------------------------------------------
+r67 | chohanmu@UTORONTO.CA | 2014-11-23 02:03:22 -0500 (Sun, 23 Nov 2014) | 1 line
+
+MyParser test written as well as Presentor.
+------------------------------------------------------------------------
+r66 | chohanmu@UTORONTO.CA | 2014-11-23 02:02:15 -0500 (Sun, 23 Nov 2014) | 1 line
+
+MyParser editted to follow SRP.
+------------------------------------------------------------------------
+r65 | chohanmu@UTORONTO.CA | 2014-11-23 01:35:37 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Test written for methods in Presentor class
+------------------------------------------------------------------------
+r64 | chohanmu@UTORONTO.CA | 2014-11-23 01:35:04 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Class that prints results
+------------------------------------------------------------------------
+r63 | chohanmu@UTORONTO.CA | 2014-11-23 01:34:36 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Tests written for MyParser
+------------------------------------------------------------------------
+r62 | chohanmu@UTORONTO.CA | 2014-11-23 00:34:43 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Editted PublicationsExtractor, TotalCitationsExtractor, TotalCoAuthorsExtractor to return in place of print statement and changed MyParse due to these changes.
+------------------------------------------------------------------------
+r61 | chohanmu@UTORONTO.CA | 2014-11-23 00:32:30 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Tests written for each class method except MyParser
+------------------------------------------------------------------------
+r60 | chohanmu@UTORONTO.CA | 2014-11-22 23:04:11 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Test written for files being committed: AuthorNameExtrator, CoAuthorsNames, CodeExtractor, Extractor
+------------------------------------------------------------------------
+r59 | chohanmu@UTORONTO.CA | 2014-11-22 22:56:39 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Method of Extractor class changed to static
+------------------------------------------------------------------------
+r58 | chohanmu@UTORONTO.CA | 2014-11-22 21:40:39 -0500 (Sat, 22 Nov 2014) | 1 line
+
+unnecessary imports deleted.
+------------------------------------------------------------------------
+r57 | chohanmu@UTORONTO.CA | 2014-11-22 21:39:50 -0500 (Sat, 22 Nov 2014) | 1 line
+
+tests for all classes initialized
+------------------------------------------------------------------------
+r56 | chohanmu@UTORONTO.CA | 2014-11-22 21:39:18 -0500 (Sat, 22 Nov 2014) | 1 line
+
+package name refactored
+------------------------------------------------------------------------
+r55 | chohanmu@UTORONTO.CA | 2014-11-22 21:02:47 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Comments inserted.
+------------------------------------------------------------------------
+r54 | chohanmu@UTORONTO.CA | 2014-11-22 20:41:45 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Code to print out names of co-authors in a sorted list.
+------------------------------------------------------------------------
+r53 | chohanmu@UTORONTO.CA | 2014-11-22 19:21:21 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Implemented to print all co-authors ascending order of their names.
+------------------------------------------------------------------------
+r52 | chohanmu@UTORONTO.CA | 2014-11-22 18:27:20 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Set implemented to store coAuthors Names
+------------------------------------------------------------------------
+r51 | chohanmu@UTORONTO.CA | 2014-11-22 18:00:42 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Added code to printout authors info
+------------------------------------------------------------------------
+r50 | chohanmu@UTORONTO.CA | 2014-11-22 17:59:17 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Adding class to calculate total coAuthors
+------------------------------------------------------------------------
+r49 | chohanmu@UTORONTO.CA | 2014-11-22 17:58:48 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Adding class to calculate total citations
+------------------------------------------------------------------------
+r48 | chohanmu@UTORONTO.CA | 2014-11-22 17:58:21 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Adding class to extract i10-index
+------------------------------------------------------------------------
+r47 | chohanmu@UTORONTO.CA | 2014-11-22 17:57:41 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Adding class to extract first three publications
+------------------------------------------------------------------------
+r46 | chohanmu@UTORONTO.CA | 2014-11-22 11:56:37 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Classes created to ensure SRP. Successfully working: AuthorsName and Number of Citations.
+------------------------------------------------------------------------
+r41 | attarwal@UTORONTO.CA | 2014-11-20 17:57:08 -0500 (Thu, 20 Nov 2014) | 1 line
+
+A3 Starter code by instructor
+------------------------------------------------------------------------
+
+
+
+
+PART 3) +++SVN COMMIT LOGS ON test+++
+------------------------------------------------------------------------
+r68 | chohanmu@UTORONTO.CA | 2014-11-23 02:04:01 -0500 (Sun, 23 Nov 2014) | 1 line
+
+unnecessary imports deleted.
+------------------------------------------------------------------------
+r67 | chohanmu@UTORONTO.CA | 2014-11-23 02:03:22 -0500 (Sun, 23 Nov 2014) | 1 line
+
+MyParser test written as well as Presentor.
+------------------------------------------------------------------------
+r65 | chohanmu@UTORONTO.CA | 2014-11-23 01:35:37 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Test written for methods in Presentor class
+------------------------------------------------------------------------
+r63 | chohanmu@UTORONTO.CA | 2014-11-23 01:34:36 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Tests written for MyParser
+------------------------------------------------------------------------
+r61 | chohanmu@UTORONTO.CA | 2014-11-23 00:32:30 -0500 (Sun, 23 Nov 2014) | 1 line
+
+Tests written for each class method except MyParser
+------------------------------------------------------------------------
+r60 | chohanmu@UTORONTO.CA | 2014-11-22 23:04:11 -0500 (Sat, 22 Nov 2014) | 1 line
+
+Test written for files being committed: AuthorNameExtrator, CoAuthorsNames, CodeExtractor, Extractor
+------------------------------------------------------------------------
+r57 | chohanmu@UTORONTO.CA | 2014-11-22 21:39:50 -0500 (Sat, 22 Nov 2014) | 1 line
+
+tests for all classes initialized
+------------------------------------------------------------------------
+r41 | attarwal@UTORONTO.CA | 2014-11-20 17:57:08 -0500 (Thu, 20 Nov 2014) | 1 line
+
+A3 Starter code by instructor
+------------------------------------------------------------------------
+
+
+
+
+PART 4) +++HONOR CODE?+++
+// **********************************************************
+// Assignment3:
+// UTORID user_name: chohanmu
+//
+// Author: Muhammad Ammar Chohan
+//
+//
+// Honor Code: I pledge that this program represents my own
+// program code and that I have coded on my own. I received
+// help from no one in designing and debugging my program.
+// *********************************************************
+
+
+
+
+PART 5) +++FOLLOWING LINES ARE GREATER THAN 80 CHARACTERS+++
+
+
+
+
+
+PART 6) +++IDE FILES+++
+Good, you have no IDE files in your SVN repository
+
+
+
+
+Part 7) +++ COMPILING YOUR ASSIGNMENT +++
+Buildfile: /home/yunyunzai/Dropbox/dgp/CSC207TA2014_FALL/A3/marks/chohanmu/build.xml
+
+compile:
+    [mkdir] Created dir: /home/yunyunzai/Dropbox/dgp/CSC207TA2014_FALL/A3/marks/chohanmu/bin
+    [javac] /home/yunyunzai/Dropbox/dgp/CSC207TA2014_FALL/A3/marks/chohanmu/build.xml:8: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 22 source files to /home/yunyunzai/Dropbox/dgp/CSC207TA2014_FALL/A3/marks/chohanmu/bin
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+Good, program built successfully.
+
+
+
+
+Part 8) +++RUNNING TEST CASE1 WITH NO OUTPUT FILE+++ with dj.html
+-------------------------------------------------
+1. Name of the Author:
+	Deepak Jagdish
+2. Number of All Citations:
+	23
+3. Number of i10-index after 2009:
+	0
+4. Title of the first 3 publications:
+	1- Nokia internet pulse: a long term deployment and iteration of a twitter visualization
+	2- Real time collaborative video annotation using Google App Engine and XMPP protocol
+	3- Sonic Grid: an auditory interface for the visually impaired to navigate GUI-based environments
+5. Total paper citation(first 5 papers):
+	23
+6. Total Co-Authors:
+	5
+-------------------------------------------------
+7. Co-Author list sorted (Total: 5):
+	Abbas Attarwala
+	Blair MacIntyre
+	Joseph 'Jofish' Kaye
+	Yan Xu
+	rahul sawhney
+
+
+
+
+Part 9) +++RUNNING TEST CASE2 WITH NO OUTPUT FILE+++ with dj.html and rs.html
+-------------------------------------------------
+1. Name of the Author:
+	Deepak Jagdish
+2. Number of All Citations:
+	23
+3. Number of i10-index after 2009:
+	0
+4. Title of the first 3 publications:
+	1- Nokia internet pulse: a long term deployment and iteration of a twitter visualization
+	2- Real time collaborative video annotation using Google App Engine and XMPP protocol
+	3- Sonic Grid: an auditory interface for the visually impaired to navigate GUI-based environments
+5. Total paper citation(first 5 papers):
+	23
+6. Total Co-Authors:
+	5
+-------------------------------------------------
+1. Name of the Author:
+	rahul sawhney
+2. Number of All Citations:
+	33
+3. Number of i10-index after 2009:
+	1
+4. Title of the first 3 publications:
+	1- On fast exploration in 2D and 3D terrains with multiple robots
+	2- Sonic Grid: an auditory interface for the visually impaired to navigate GUI-based environments
+	3- Multi robotic exploration with communication requirement to a fixed base station
+5. Total paper citation(first 5 papers):
+	33
+6. Total Co-Authors:
+	0
+-------------------------------------------------
+7. Co-Author list sorted (Total: 5):
+	Abbas Attarwala
+	Blair MacIntyre
+	Joseph 'Jofish' Kaye
+	Yan Xu
+	rahul sawhney
+
+
+
+
+Part 10) +++RUNNING TEST CASE2 WITH OUTPUT FILE+++ with dj.html and rs.html
+
+
+
+
+
+Part 11) +++SRP CHECK+++
+SRP followed. Good!
+
+
+
+
