@@ -1,19 +1,5 @@
 // **********************************************************
-// Assignment1:
-// UTOR1 user_name: bernst56
-// UT1 Student #: 1002029672
-// Author1: Michael William Bernstein
-//
-// UTOR2 user_name: chohanmu
-// UT2 Student #: 1002008105
-// Author2: Muhammad Ammar Chohan
-//
-//
-// Honor Code: I pledge that this program represents my own
-// program code and that I have coded on my own. I received
-// help from no one in designing and debugging my program.
-// I have also read the plagiarism section in the course info
-// sheet of CSC 207 and understand the consequences.
+// This project was done in collaboration with another student.
 // *********************************************************
 package a1;
 
