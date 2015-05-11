@@ -1,15 +1,4 @@
 package driver;
-// **********************************************************
-// Assignment3:
-// UTORID user_name: chohanmu
-//
-// Author: Muhammad Ammar Chohan
-//
-//
-// Honor Code: I pledge that this program represents my own
-// program code and that I have coded on my own. I received
-// help from no one in designing and debugging my program.
-// *********************************************************
 
 import java.io.FileWriter;
 import java.io.IOException;
