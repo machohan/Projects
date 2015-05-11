@@ -1,5 +1,5 @@
 import java.lang.*;
-public class LabAssignment4
+public class FindWinner
 {
 	public static void main(String[] args) 
 	{
