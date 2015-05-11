@@ -1,8 +1,8 @@
 import java.io.*;
 
 // User enters integer N.  The program calculates N factorial.
-//
-public class assign1
+
+public class Factorial
 {
   public static void main (String[] args ) throws IOException
   {
