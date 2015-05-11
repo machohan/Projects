@@ -1,21 +1,5 @@
 // **********************************************************
-// Assignment2:
-// UTOR user_name1: chohanmu
-// UTOR user_name2: bernst56
-// UTOR user_name3: kattanb1
-// UTOR user_name4: vanthal3
-//
-// Author1: Muhammad Ammar Chohan
-// Author2: Michael William Bernstein
-// Author3: Basel Kattan
-// Author4: Hanifa Vanthaliwala
-//
-//
-// Honor Code: I pledge that this program represents my own
-// program code and that I have coded on my own. I received
-// help from no one in designing and debugging my program.
-// I have also read the plagiarism section in the course info
-// sheet of CSC 207 and understand the consequences.
+// Please note this project was done in collaboration with three more students.
 // *********************************************************
 package driver;
 
