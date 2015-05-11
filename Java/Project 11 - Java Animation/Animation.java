@@ -1,7 +1,3 @@
-//Name: 
-//Student ID: 
-//Description:
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +9,7 @@ import java.util.Random;
 import javax.sound.sampled.*;
 import javax.swing.*;
 
-public class Assignment3 extends JApplet implements Runnable, ActionListener{
+public class Animation extends JApplet implements Runnable, ActionListener{
 	
 	private JPanel buttonP;	//JPanel for Button
 	private JButton turnB;	//JButton for Turn Red Circle Button
