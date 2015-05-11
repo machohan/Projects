@@ -1,6 +1,3 @@
-// Name: Muhammad Ammar Chohan
-//Student Number: 2124-82766
-
 import java.awt.*;
 import java.awt.event.*;
 
