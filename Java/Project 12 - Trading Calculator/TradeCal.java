@@ -1,9 +1,3 @@
-//From @MAC_Traders
-//Pumps and Dumps, 800+ Stock Promoters, 600+ Emails, 30+ Websites, special trading calculator = $50/- Only
-//Visit: https://sellfy.com/p/Y1dW/
-//Email: myzadmail@gmail.com
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -349,8 +343,3 @@ public class TradeCal extends JApplet {
 		}
 	}
 }
-
-//From @MAC_Traders
-//Pumps and Dumps, 800+ Stock Promoters, 600+ Emails, 30+ Websites, special trading calculator = $50/- Only
-//Visit: https://sellfy.com/p/Y1dW/
-//Email: myzadmail@gmail.com
