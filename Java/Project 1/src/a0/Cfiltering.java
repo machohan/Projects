@@ -1,16 +1,3 @@
-// **********************************************************
-// Assignment0:
-// UTOR user_name: chohanmu
-// UT Student #: 1002008105
-// Author: Muhammad Ammar Chohan
-//
-//
-// Honor Code: I pledge that this program represents my own
-// program code and that I have coded on my own. I received
-// help from no one in designing and debugging my program.
-// I have also read the plagiarism section in the course info
-// sheet of CSC 207 and understand the consequences.
-// *********************************************************
 package a0;
 
 import java.io.BufferedReader;
