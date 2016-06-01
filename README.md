@@ -4,10 +4,8 @@ This is a personal repository made not for live/ongoing projects but to be used 
 
 Web development samples:
 http://cslinux.utm.utoronto.ca/~chohanmu/twitterapp/view/
-
 http://cslinux.utm.utoronto.ca/~chohanmu/simple/
-
-http://octatwo.com/ \s\s
+http://octatwo.com/
 
 Enjoy the code!
 
