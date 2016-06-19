@@ -47,8 +47,3 @@ a1/vulnerable/
   ✓ REPORT.txt 
   # any other files needed
 
------------
-
-I do want each folder to contain the original and modified code, so I
-could easily run diff for comparison if needed.
-
