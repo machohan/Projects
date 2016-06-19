@@ -1,0 +1,13 @@
+Vulnerability: There is possibility of  buffer overflow in processOneLine() of local buffer s[1024].
+
+Exploit a: Overflowing buffer s and overwriting the return address in stack frame of  processOneLine() can launch a shell that can accept input commands from the hacker.
+
+Exploit b: Overflowing buffer s can be used to overwrite the return address in stack frame of  processOneLine() causing control to jump to malicious code in the program.
+
+--------------------------------------------------------------------------
+
+Vulnerability: The palindrome server is a one threaded application. It doesn't spawn threads to execute client requests. There is a possibility to get the palindrome server to block reading from a client socket, rendering it unresponsive to other clients.   
+
+Exploit a: A client can cause the palindrome server to block waiting for the client to send data to the server socket. 
+
+--------------------------------------------------------------------------

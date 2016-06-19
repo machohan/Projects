@@ -1,0 +1,239 @@
+*******Vulnerable services on different machines********
+---------------------------------------------------------------
+Ubuntu8.04 - 192.168.0.100
+nmap -A 192.168.0.100
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-11-28 17:50 EST
+Nmap scan report for 192.168.0.100
+Host is up (0.00015s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1f:8d:f9:86:f9:c8:d0:01:f5:b7:49:e0:f4:ae:1c:58 (DSA)
+|_  2048 a0:c2:08:b4:9b:db:a0:86:2b:ef:d9:be:94:5f:64:e4 (RSA)
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch)
+| http-methods: Potentially risky methods: TRACE
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 00:0C:29:95:C6:0C (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.15 ms 192.168.0.100
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.98 seconds
+
+Issue: Running Linux 2.6.X.
+Vulnerability: Buffer overflow.
+Exploit: buffer overflow vulnerability can be exploited to cause denial of service to authorised users.
+Resolution: update operating system to latest version or at least install patches.
+
+Issue: Running ssh version OpenSSH 4.7p1.
+Vulnerability: attackers can to obtain some plaintext data from a ciphertext block.
+Exploit: attackers can obtain confidential data and sabotage overall security of the network and could use this confidential information to access privileged permissions. 
+Resolution: update OS or install patches or use more secured encryption method to secure ssh session against eve and mallory.
+
+Issue: Apache httpd 2.2.8
+Vulnerability: TRACE enabled on apache web server.
+Exploit: Apache is enabled to output errors on to the website. Attackers can obtain information about the system and can possibly use it to cause denial of service.
+
+Vulnerability: XSS(cross site scripting)
+Exploit: Remote hackers can inject arbitrary web script or HTML via a wildcard in the last directory component. XSS can have damaging impact on our web application i.e loss of information and denial of service.
+
+Resolution: Disable TRACE on apache. Update Apache version.
+
+Issue: PHP/5.2.4
+Vulnerability: Directory traversal vulnerabilities
+Exploit: Hacker can create subdirectory with the name of http: and then submitting URL with ../ to traverse through a directory. Attacker is able to modify file system and sabotage integrity of the system.
+Resolution: update PHP version running this server.
+--------------------------------------------------------------------------------
+FC4 - (eth0 - 10.10.10.10) 
+nmap -A -T4 10.10.10.10
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-11-28 17:50 EST
+Nmap scan report for 10.10.10.10
+Host is up (0.0053s latency).
+Not shown: 996 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+22/tcp open   ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a0:f8:a6:4d:0e:e0:47:a1:4e:99:3a:e1:24:f4:41:b9 (DSA)
+|_  1024 92:2e:f8:8d:cd:c1:b3:e5:6f:9d:f5:77:55:8c:50:6d (RSA)
+25/tcp closed smtp
+80/tcp closed http
+Device type: general purpose
+Running: Linux 2.4.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4
+OS details: DD-WRT v24-sp2 (Linux 2.4.37)
+Network Distance: 2 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.54 ms 192.168.0.2
+2   0.54 ms 10.10.10.10
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 26.24 seconds
+
+Issue: Running OpenSSH 4.0.
+Vulnerability: Security bypass - attackers can force a command to execute using ForceCommand parameter with ssh and bypass the security to execute privileged operation and successfully execute a command on FC4(firewall) and cause damage to the integrity of the system. Firewal rules can also be changed by the attacker.
+Exploit: Attacker can modify files and violate integrity of the system. Can also modify network rules.
+Resolution: Update to latest version of OpenSSH.
+
+Issue: Running Linux 2.4.37.
+Vulnerability: kernel is prone to a local privilege-escalation vulnerability. 
+Exploit: Local attackers can exploit the issue to execute arbitrary code with elevated privileges or crash the system, effectively denying service to legitimate users.
+Resolution: Update to latest version of Linux kernel as this vulnerability only exists prior to 2.6.5.
+-------------------------------------------------------------------------------------
+FC4 - (eth1 - 192.168.0.10)
+nmap -A 192.168.0.10
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-11-28 17:52 EST
+Nmap scan report for 192.168.0.10
+Host is up (0.00021s latency).
+Not shown: 996 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+22/tcp open   ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a0:f8:a6:4d:0e:e0:47:a1:4e:99:3a:e1:24:f4:41:b9 (DSA)
+|_  1024 92:2e:f8:8d:cd:c1:b3:e5:6f:9d:f5:77:55:8c:50:6d (RSA)
+25/tcp closed smtp
+80/tcp closed http
+MAC Address: 00:0C:29:FC:33:6B (VMware)
+Aggressive OS guesses: Linux 2.6.9 - 2.6.27 (97%), Cisco UC320 PBX (Linux 2.6) (96%), Linux 2.6.11 (Auditor) (96%), Lantronix SLC 8 terminal server (Linux 2.6) (95%), Linux 2.6.15 (likely TP-Link WAP) (95%), Ruckus ZD1050 WAP (95%), Linux 2.6.5 (SUSE Enterprise Server 9) (95%), Linux 2.6.20 (95%), Linux 2.6.20 (Ubuntu, x86_64) (95%), Linux 2.6.23 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.21 ms 192.168.0.10
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.94 seconds
+
+Issue: Running OpenSSH 4.0.
+Vulnerability: Security bypass - attackers can force a command to execute using ForceCommand parameter with ssh and bypass the security to execute privileged operation and successfully execute a command on FC4(firewall) and cause damage to the integrity of the system. Firewal rules can also be changed by the attacker.
+Exploit: Attacker can modify files and violate integrity of the system. Can also modify network rules.
+Resolution: Update to latest version of OpenSSH.
+
+Issue: Running Linux 2.6.9 or earlier.
+Vulnerability: Denial of Service Overflow
+Exploit: The Performance Events subsystem in the Linux kernel before 3.1 does not properly handle event overflows associated with PERF_COUNT_SW_CPU_CLOCK events, which allows local users to cause a denial of service (system hang) via a crafted application.
+Course of action: Update Linux kernel to version 3.1+
+
+------------------------------------------------------------------------------------
+RH7.2 - 10.10.10.11
+nmap -A 10.10.10.11
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-11-28 17:54 EST
+Nmap scan report for 10.10.10.11
+Host is up (0.00015s latency).
+Not shown: 992 closed ports
+PORT      STATE SERVICE    VERSION
+7/tcp     open  echo
+22/tcp    open  ssh        OpenSSH 2.9p2 (protocol 1.99)
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+|_sshv1: Server supports SSHv1
+25/tcp    open  smtp       Sendmail 8.11.6/8.11.6
+| smtp-commands: localhost.localdomain Hello host [10.10.10.1], pleased to meet you, ENHANCEDSTATUSCODES, 8BITMIME, SIZE, DSN, ONEX, ETRN, XUSR, HELP, 
+|_ 2.0.0 This is sendmail version 8.11.6 2.0.0 Topics: 2.0.0 HELO EHLO MAIL RCPT DATA 2.0.0 RSET NOOP QUIT HELP VRFY 2.0.0 EXPN VERB ETRN DSN AUTH 2.0.0 STARTTLS 2.0.0 For more info use "HELP <topic>". 2.0.0 To report bugs in the implementation send email to 2.0.0 sendmail-bugs@sendmail.org. 2.0.0 For local information send email to Postmaster at your site. 2.0.0 End of HELP info 
+80/tcp    open  http       Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux))
+| http-methods: Potentially risky methods: TRACE
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+111/tcp   open  rpcbind    2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1          32768/tcp  status
+|   100024  1          32768/udp  status
+|_  391002  2          32769/tcp  sgi_fam
+7777/tcp  open  msdtc      Microsoft Distributed Transaction Coordinator (error)
+7778/tcp  open  interwise?
+32768/tcp open  status     1 (RPC #100024)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port7778-TCP:V=6.47%I=7%D=11/28%Time=565A3091%P=x86_64-unknown-linux-gn
+SF:u%r(NULL,23,"Palindrome\x20server,\x20'quit'\x20to\x20quit:\n")%r(Gener
+SF:icLines,5B,"Palindrome\x20server,\x20'quit'\x20to\x20quit:\nYour\x20str
+SF:ing\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\n
+SF:")%r(GetRequest,5F,"Palindrome\x20server,\x20'quit'\x20to\x20quit:\nYou
+SF:r\x20string\x20is\x20not\x20a\x20palindrome\nYour\x20string\x20is\x20a\
+SF:x20palindrome\n")%r(HTTPOptions,5F,"Palindrome\x20server,\x20'quit'\x20
+SF:to\x20quit:\nYour\x20string\x20is\x20not\x20a\x20palindrome\nYour\x20st
+SF:ring\x20is\x20a\x20palindrome\n")%r(RTSPRequest,5F,"Palindrome\x20serve
+SF:r,\x20'quit'\x20to\x20quit:\nYour\x20string\x20is\x20not\x20a\x20palind
+SF:rome\nYour\x20string\x20is\x20a\x20palindrome\n")%r(RPCCheck,393,"Palin
+SF:drome\x20server,\x20'quit'\x20to\x20quit:\nYour\x20string\x20is\x20a\x2
+SF:0palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x2
+SF:0is\x20not\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\
+SF:nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20
+SF:palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20
+SF:is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x2
+SF:0string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20not\x20a\x20p
+SF:alindrome\nYour\x20string\x20is\x20not\x20a\x20palindrome\nYour\x20stri
+SF:ng\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\nY
+SF:our\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20pa
+SF:lindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20is
+SF:\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20s
+SF:tring\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome
+SF:\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x2
+SF:0palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x2
+SF:0is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x
+SF:20string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a\x20palindr
+SF:ome\nYour\x20string\x20is\x20a\x20palindrome\nYour\x20string\x20is\x20a
+SF:\x20palindrome\nYour\x20string\x20i");
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.2
+Network Distance: 2 hops
+Service Info: Host: localhost.localdomain; OSs: Unix, Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.05 ms 192.168.0.2
+2   0.10 ms 10.10.10.11
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 163.03 seconds
+
+Issue: Running OpenSSH 2.9p2
+Vulnerability: Buffer Overflow
+Exploit: Buffer overflow in sshd in OpenSSH 2.3.1 through 3.3 may allow remote attackers to execute arbitrary code via a large number of responses during challenge response authentication when OpenBSD is using PAM modules with interactive keyboard authentication (PAMAuthenticationViaKbdInt). 
+Course of action: Update OpenSSH to version 3.3+
+
+Issue: Running Sendmail 8.11.6
+Vulnerability: Buffer overflow
+Exploit: Buffer overflow in Sendmail 5.79 to 8.12.7 allows remote attackers to execute arbitrary code via certain formatted address fields, related to sender and recipient header comments as processed by the crackaddr function of headers.c. 
+Course of action: Update Sendmail to version greater than 8.12.7
+
+Issue: Running Apache 1.3.20
+Vulnerability: Denial of Service, Execute arbitrary code
+Exploit: Apache 1.3 through 1.3.24 allows remote attackers to cause a denial of service and possibly execute arbitrary code via a chunk-encoded HTTP request that causes Apache to use an incorrect size. 
+Course of action: Update Apache version to 1.3.24+
+
+Issue: RPCbind service
+Vulnerability: rpcbind incorrectly handles certain memorystructures
+Exploit: A remote attacker could use this issue to cause rpcbind tocrash, resulting in a denial of service, or possibly execute arbitrarycode.
+Course of action: Either update RPCbind to latest version or disable entirely.
+
+Issue: MSDTC service
+Vulnerability: The MSDTC service is prone to a memory corruption vulnerability
+Exploit:  This issue could allow for execution of arbitrary code in the context of the service. The vulnerability may be remotely exploitable in some circumstances, but will also permit local privilege escalation.
+Course of action: Microsoft has released a security bulletin to address this issue on supported platforms. Users are strongly advised to apply the patches due to the existence of malicious self-propagating code that exploits the issue.
+
+Issue: Running Linux 3.2
+Vulnerability: DoS. The mem_cgroup_usage_unregister_event function in mm/memcontrol.c in the Linux kernel before 3.2.10 does not properly handle multiple events that are attached to the same eventfd.
+Exploit: allows local users to cause a denial of service (NULL pointer dereference and system crash) or other impacts by registering memory threshold events. 
+Course of action: Update Linux kernel to version greater than 3.2.10.

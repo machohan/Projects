@@ -1,0 +1,13 @@
+$ sha1sum threeLaws1.txt
+a1f4fdf0733263558dba97263ffa85aef44b0dcb  threeLaws1.txt
+
+$ sha1sum threeLaws2.txt
+d9cae71ea2f6e099a5aa8aa975a9fb785f142dbe  threeLaws2.txt
+
+$ sha1sum threeLaws3.txt
+4da19d7a010ddefec03c14a64ebbefbb728e94ce  threeLaws3.txt
+
+$ cat threeLaws.txt.sha1
+SHA1(threeLaws.txt)= d9cae71ea2f6e099a5aa8aa975a9fb785f142dbe
+
+ANSWER: sha1 hash came from threeLaws2.txt

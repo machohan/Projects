@@ -1,0 +1,66 @@
+a) Report everything you know about my network and its systems.
+
+Dell_9f:f3:b0 (00:12:3f:9f:f3:b0)
+	IP: 192.168.1.138
+	Location: home-desktop
+	Port 631: CUPS
+
+Cisco-Li_a5:a2:2b (00:21:29:a5:a2:2b)
+	IP: 192.168.1.1/128.100.3.90
+	Domain: www.cs.toronto.edu/colony.cs.toronto.edu
+	OS: Linux
+	Server: OpenWRT/WhiteRussian UPnP/1.0 miniupnpd/1.0
+	Port 53: DNS
+	Port 2053: SSDP
+	Port 80: TCP/HTTP
+	Services: rootdevice, InternetGatewayDevice, WANConnectionDevice, WANDevice, WANCommonInterfaceConfig, 
+		  WANIPConnection, WANPPPConnection, Layer3Forwarding
+	
+CadmusCo_37:5b:43 (08:00:27:37:5b:43)
+	IP: 192.168.1.130
+	OS: Ubuntu/10.04
+	Username/PW: smartStudent:problemSolved
+	Port 46563: DNS
+	Port 53284: TCP/HTTP
+
+IntelCor_ce:32:c5 (00:13:02:ce:32:C5)
+	IP: 192.168.1.130
+	Port 53284: TCP/HTTP
+
+IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+	IP: 239.255.255.250
+	Port 1900: SSDP
+
+Analysis:
+Dell appears to be used as the host for the print server, to which black and white printers Canon-iP4200 and Canon-MF4100 
+are connected. Cisco-Li acts as the hosting system for SSDP as well as HTTP, and hosts the domain www.cs.toronto.edu.
+CadmusCo is the user system used to access the HTTP server and perform the request for the page at /~arnold/346/
+assignments/03/special. Cisco-Li most likely uses an ARP table that clears periodically, as it asks for the MAC
+address at 192.168.1.130 in the middle of communication. The server Cisco-Li uses TCP protocol to establish
+connections, and uses Basic Authentication to verify user credentials. 
+	
+
+b) Riddle: Whats the question? Whats the answer?
+
+Question: What's Fast?
+Answer: smokin' tuna
+
+c) Describe how you solved the above questions and two different ways one could prevent such an attack.
+
+Only Basic Authentication was used in the HTTP protocol, allowing me to easily view the user credentials that were
+translated via WireShark. After obtaining the credentials, I simply accessed the page through a browser and entered 
+the credentials, gaining proper access. This could similarly be accomplished by a man in the middle attack.
+
+One way to prevent such an attack is to use encryption via HTTPS protocol instead of HTTP. This would ensure the privacy
+and integrity of the exchanged data, such that ARP spoofing or sniffing would be much less likely. Another way of 
+preventing such an attack would be to use static ARP entries. This would ensure that hackers cannot use ARP spoofing on
+your network, as MAC addresses will not be changed once set. This would help prevent man in the middle attacks from
+intercepting user credentials and other crucial data.
+
+d) List anything else you discovered. Be creative.
+
+There is an interesting interaction between CadmusCo, Cisco-Li, and IntelCor. CadmusCo sends requests to Cisco-Li while
+Cisco-Li sends replies to IntelCor. According to the traffic, both CadmusCo and IntelCor appear to be sharing the same
+IP Address at 192.168.1.130, despite the two having different MAC addresses. One possible explanation for this could be
+that IntelCor is acting as a man in the middle between CadmusCo and Cisco-Li. This would allow IntelCor to intercept all
+data exchanges between the two, and possibly obtain crucial data, such as the user credentials in this case.

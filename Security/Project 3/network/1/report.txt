@@ -1,0 +1,276 @@
+All services all systems are running inside the network 192.168.0.*
+
+nmap -A -T4 192.168.0.*
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-12-01 23:46 EST
+Nmap scan report for 192.168.0.1
+Host is up (0.000065s latency).
+Not shown: 706 filtered ports, 293 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 6f:13:24:5d:f7:52:00:3f:07:7b:50:42:46:64:d1:54 (DSA)
+|_  2048 31:d2:a0:74:36:9e:f1:72:3b:e7:95:51:14:19:98:0d (RSA)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.06 ms 192.168.0.1
+
+Nmap scan report for 192.168.0.2
+Host is up (0.00019s latency).
+All 1000 scanned ports on 192.168.0.2 are closed
+MAC Address: 00:50:56:FC:95:40 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Aethra Starvoice 1042 ADSL router (91%), Bluebird SuperDOS (91%), Brother NC-130h print server (91%), Brother HL-1870N printer (91%), Brother HL-2070N or MFC-5460CN printer (91%), Brother HL-2070N printer (91%), Brother HL-5070N printer (91%), Brother MFC-7820N printer (91%), Brother MFC-9420CN printer (91%), Elk ELK-M1EXP Ethernet-to-serial bridge (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.19 ms 192.168.0.2
+
+Nmap scan report for 192.168.0.10
+Host is up (0.00020s latency).
+Not shown: 996 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+22/tcp open   ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a0:f8:a6:4d:0e:e0:47:a1:4e:99:3a:e1:24:f4:41:b9 (DSA)
+|_  1024 92:2e:f8:8d:cd:c1:b3:e5:6f:9d:f5:77:55:8c:50:6d (RSA)
+25/tcp closed smtp
+80/tcp closed http
+MAC Address: 00:0C:29:FC:33:6B (VMware)
+Aggressive OS guesses: Linux 2.6.9 - 2.6.27 (97%), Cisco UC320 PBX (Linux 2.6) (96%), Lantronix SLC 8 terminal server (Linux 2.6) (96%), Linux 2.6.23 (95%), Linux 2.6.15 (likely TP-Link WAP) (95%), Linux 2.6.11 (Auditor) (95%), Linux 2.6.27 (Ubuntu 8.10) (95%), Linux 2.6.9 - 2.6.18 (94%), Linux 2.6.21 (94%), Ruckus ZD1050 WAP (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.20 ms 192.168.0.10
+
+Nmap scan report for 192.168.0.75
+Host is up (0.00011s latency).
+All 1000 scanned ports on 192.168.0.75 are closed
+MAC Address: 00:0C:29:15:84:E7 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.11 ms 192.168.0.75
+
+Nmap scan report for 192.168.0.100
+Host is up (0.00013s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1f:8d:f9:86:f9:c8:d0:01:f5:b7:49:e0:f4:ae:1c:58 (DSA)
+|_  2048 a0:c2:08:b4:9b:db:a0:86:2b:ef:d9:be:94:5f:64:e4 (RSA)
+25/tcp open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch)
+| http-methods: Potentially risky methods: TRACE
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 00:0C:29:95:C6:0C (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.13 ms 192.168.0.100
+
+Nmap scan report for 192.168.0.254
+Host is up (0.000033s latency).
+All 1000 scanned ports on 192.168.0.254 are filtered
+MAC Address: 00:50:56:EA:98:4E (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.03 ms 192.168.0.254
+
+Nmap scan report for 192.168.0.128
+Host is up (0.000024s latency).
+All 1000 scanned ports on 192.168.0.128 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 256 IP addresses (7 hosts up) scanned in 192.65 seconds
+
+---------------------------------------------------------------------------------------------
+REPORT
+
+Nmap scan report for 192.168.0.1
+Host is up (0.000065s latency).
+Not shown: 706 filtered ports, 293 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 6f:13:24:5d:f7:52:00:3f:07:7b:50:42:46:64:d1:54 (DSA)
+|_  2048 31:d2:a0:74:36:9e:f1:72:3b:e7:95:51:14:19:98:0d (RSA)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.06 ms 192.168.0.1
+
+Machine with ip address  192.168.0.1 is running one service namely 
+OpenSSH version 5.3 on port 22 on tcp network protocol. 
+Port state is open and so machine is listening and accepting ssh 
+connections on port 22. We also know that machine is running
+on VMware with mac address 00:50:56:C0:00:08 and the machine 
+is running Linux 2.6.X|3.X operation system. The network distance
+is 1 hop. From nmap scan we also know 1024 bit DSA and 2048 but RSA
+encrypted ssh hostkey.
+---------------------------------------------------------------------
+Nmap scan report for 192.168.0.2
+Host is up (0.00019s latency).
+All 1000 scanned ports on 192.168.0.2 are closed
+MAC Address: 00:50:56:FC:95:40 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Aethra Starvoice 1042 ADSL router (91%), Bluebird SuperDOS (91%), Brother NC-130h print server (91%), Brother HL-1870N printer (91%), Brother HL-2070N or MFC-5460CN printer (91%), Brother HL-2070N printer (91%), Brother HL-5070N printer (91%), Brother MFC-7820N printer (91%), Brother MFC-9420CN printer (91%), Elk ELK-M1EXP Ethernet-to-serial bridge (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.19 ms 192.168.0.2
+
+From nmap scan of machine with ip address 192.168.0.2, we know
+that this machine is not running any service. Not one specific
+operation system runing on this machine is found. Network distance
+is 1 hop away from kali linux 192.168.0.128.
+---------------------------------------------------------------------
+Nmap scan report for 192.168.0.10
+Host is up (0.00020s latency).
+Not shown: 996 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+22/tcp open   ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a0:f8:a6:4d:0e:e0:47:a1:4e:99:3a:e1:24:f4:41:b9 (DSA)
+|_  1024 92:2e:f8:8d:cd:c1:b3:e5:6f:9d:f5:77:55:8c:50:6d (RSA)
+25/tcp closed smtp
+80/tcp closed http
+MAC Address: 00:0C:29:FC:33:6B (VMware)
+Aggressive OS guesses: Linux 2.6.9 - 2.6.27 (97%), Cisco UC320 PBX (Linux 2.6) (96%), Lantronix SLC 8 terminal server (Linux 2.6) (96%), Linux 2.6.23 (95%), Linux 2.6.15 (likely TP-Link WAP) (95%), Linux 2.6.11 (Auditor) (95%), Linux 2.6.27 (Ubuntu 8.10) (95%), Linux 2.6.9 - 2.6.18 (94%), Linux 2.6.21 (94%), Ruckus ZD1050 WAP (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.20 ms 192.168.0.10
+
+Machine with ip address 192.168.0.10 has four services installed. Port 22 for ssh
+connections is running. This machine is running OpenSSH version 4. ftp, smtp 
+and http services are installed but there is no application listening on these 
+port and so state of these ports is closed. On port 21, this machine has file 
+transfer service. On port 25, it has mailing service and on port 80, we have 
+web service. Machine is running on VMware with mac address 00:0C:29:FC:33:6B
+and no specific operation system is found on the machine through nmap scan.
+Network distance between kali (192.168.0.128) and this machine is 1 hop.
+------------------------------------------------------------------------------------
+Nmap scan report for 192.168.0.75
+Host is up (0.00011s latency).
+All 1000 scanned ports on 192.168.0.75 are closed
+MAC Address: 00:0C:29:15:84:E7 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.11 ms 192.168.0.75
+
+Machine with ip address 192.168.0.75 has no services runing on any port
+according to nmap scan. The network distance between kali VM and this machine
+is 1 hop. No specific OS has been detected on this machine by nmap scan.
+Machine is running on VMware so we know it is a virtual machine with mac
+address 00:0C:29:15:84:E7
+------------------------------------------------------------------------------------------
+Nmap scan report for 192.168.0.100
+Host is up (0.00013s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1f:8d:f9:86:f9:c8:d0:01:f5:b7:49:e0:f4:ae:1c:58 (DSA)
+|_  2048 a0:c2:08:b4:9b:db:a0:86:2b:ef:d9:be:94:5f:64:e4 (RSA)
+25/tcp open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch)
+| http-methods: Potentially risky methods: TRACE
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 00:0C:29:95:C6:0C (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.13 ms 192.168.0.100
+
+Machine with  ip address 192.168.0.100 has ssh service version 4.7(OpenSSH 4.7) 
+running and listeing for connections on port 22. This machine is also 
+listening and accepting http (web service) connections on port 80. This web service
+is appache based running version 2.2.8. This webserver is running Ubuntu and PHP 
+version 5.2.4 with Suhosin patch. For figerprinting purposes, using nmap we know ssh
+host keys for this machine. This machine also running smtp mail service on port 25
+to which connection could not be established as indicated on nmap scan.
+This machine is a virtual machine with mac address 00:0C:29:95:C6:0C. It is running
+very old linux operating system. Network distance between kali and this machine
+is 1 hop.
+-------------------------------------------------------------------------------------
+Nmap scan report for 192.168.0.254
+Host is up (0.000033s latency).
+All 1000 scanned ports on 192.168.0.254 are filtered
+MAC Address: 00:50:56:EA:98:4E (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.03 ms 192.168.0.254
+
+Machine with ip address 192.168.0.254 has no services running on any port
+according to nmap scan. The network distance between kali VM and this machine
+is 1 hop. No specific OS has been detected on this machine by nmap scan.
+Machine is running on VMware so we know it is a virtual machine with mac
+address 00:50:56:EA:98:4E
+--------------------------------------------------------------------------------------
+Nmap scan report for 192.168.0.128
+Host is up (0.000024s latency).
+All 1000 scanned ports on 192.168.0.128 are closed
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Machine with ip address 192.168.0.128 has no services running on any port
+according to nmap scan. The network distance between kali VM and this machine
+is 0 hop - this is a localhost. No specific OS has been detected on this 
+machine by nmap scan.
+----------------------------------------------------------------------------------------
+
+All above services on network 192.168.0.* are using tcp as their network protocol.

@@ -1,0 +1,7 @@
+Discussion to make palindrome service secure:
+
+1) We should not allow a large input string to overflow the local buffer in processOneLine(). This is done by limiting the number of characters read from the input string to 
+(size of buffer -1 ) and null terminator the local buffer.
+
+2) To prevent the palindrome server blocking upon reading from clients, we can make it a multi-threaded program that spawns a new thread to execute each client request, which enables the main program to avoid reading directly from clients and possibly blocking.
+

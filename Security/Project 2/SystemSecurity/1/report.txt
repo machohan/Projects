@@ -1,0 +1,130 @@
+System Hardening
+
+Vulnerability: linux single (GRUB):
+
+Status: Unable to interact with the boot loader.
+
+Resolution: No action taken at this time.
+----------------------------------------------------------------------		
+
+Vulnerability: linux GRUB
+
+Status: Unable to interact with the boot loader.
+
+Resolution: No action taken at this time.
+----------------------------------------------------------------------
+
+Vulnerability: User tries to boot off another device (they pressed F2 during boot) (CD, USB, etc) 
+
+Status: Unable to interact with the boot loader.
+
+Resolution: No action taken at this time.
+----------------------------------------------------------------------
+
+Vulnerability: User opens up box, removes battery from system to clear BIOS settings (undoing your password protection above).
+
+Status: Unable to interact with the boot loader.
+
+Resolution: No action taken at this time.
+----------------------------------------------------------------------
+
+Vulnerability: set-uid/set-gid vulnerabilities
+
+Defense: locate all programs that are settuid root, determine who should be allowed to run these, whether they need root privilege. For example, you probably do not want the web server to be able to run many of the set-uid programs.
+
+Procedure:
+find / -perm -04000 -uid 0 -print > Set-UID-root-programs
+find / -perm -02000 -gid 0 -print > Set-GID-root-programs
+
+Status: Setuid/setgid root contains important and potentially dangerous commands that should only be run by the administrator. A hacker with access to these commands could potentially harm the system.
+Since these programs are given root priveleges, any vulnerabilities in these programs become gateways for hackers to get in.
+
+Resolution: 
+-Restrict access of commands by requiring the administrator's password upon execution.
+-Ensure that each program is secure so that they cannot be exploited.
+-Chfn potentially does not need root because even though it stores information into /etc/passwd, it does not actually store very sensitive information.
+----------------------------------------------------------------------
+
+Vulnerability: World writable files and directories. These are in general a bad thing, especially for system files. Any user can modify these!
+
+Procedure:
+find / -perm -002 -type f -ls > world-writable-files
+find / -perm -002 -type d -ls > world-writable-directories
+
+Status: There are many files in proc directory that are system files. For directories, most of them store temporary files and for all other users, directories have sticky bit set therefore although they are world writeable, world cannot delete files in those directories.
+
+Resolution: These system files in proc should only be writeable able by root because unauthorised user can modify system files and damage the system.
+----------------------------------------------------------------------
+
+Vulnerability: All users can run 'cron' jobs on the system. Among other things, this allows an attacker to install jobs that run intermittently. They do not usually appear in a 'ps' since they are usually not running.
+
+Defense: find out whats scheduled. See /etc/crontab (/etc/cron.hourly, /etc/cron.daily, /etc/cron/weekly, ...). What is scheduled to run and by whom?
+
+Status: There are several jobs scheduled to run hourly, daily weekly and monthly by root.
+
+Resolution: There is no cron.allow or cron.deny which means cron is unrestricted. Create cron.allow and put root in the list so only root can schedule jobs.
+
+Defense: Limit who can run cron jobs. See Intro To cron especially "Controlling Access to cron". Basically, if /etc/cron.allow is present, then only accounts listed in it are allowed to run cron jobs. If /etc/cron.allow does not exist, then every account can use cron, except those listed in /etc/cron.deny. Remember, it is better to whitelist than to blacklist.
+----------------------------------------------------------------------
+
+Vulnerability: Users can run 'at' jobs on the system.
+
+Status: /var/spool/at does not exist on the VM.
+
+Resolution: No action taken at this time.
+----------------------------------------------------------------------
+
+Vulnerability: umask is too permissive by default.
+
+Procedure: Use command umask to find default permissions.
+
+Status: Default is set to 022 which means user has read/write access for his own files and read/write/search for his own directories. All other users have read access for his files and read/search for his directories.
+
+Resolution: change umask to 077 so that all other users have no access to your files and directories.
+ 
+Defense: modify umask in /etc/bashrc and /etc/csh.login (how about umask 077?)
+----------------------------------------------------------------------
+
+Vulnerability: hacker can cause a core dump and then gdb it to find out how things work. Find hidden data in memory etc.
+
+Status: System currently does not have restrict core dumps, so it is possible for a hacker to intentionally cause core dumps and analyze them.
+
+Resolution: prevent core dumps by adding the following line to /etc/security/limits.conf:
+* hard core 0
+----------------------------------------------------------------------
+
+Vulnerability: Hacker can DOS the system (use up resources)
+
+Procedure: limits are stored in /etc/security/limits.conf
+
+Status:
+#*               soft    core            0
+#*               hard    rss             10000
+#@student        hard    nproc           20
+#@faculty        soft    nproc           20
+#@faculty        hard    nproc           50
+#ftp             hard    nproc           0
+#ftp             -       chroot          /ftp
+#@student        -       maxlogins       4
+
+Resolution: There is no limit for max file size. Max file size should be limited to 100MB using * hard fsize 100000. 
+Additionally, consider lowering process limits for student and faculty as they are currently too high for the VM. 
+Edit the following:
+#@student        hard    nproc           10
+#@faculty        soft    nproc           10
+#@faculty        hard    nproc           15
+----------------------------------------------------------------------
+
+Vulnerability: Weak passwords
+
+Procedure: Run john the ripper to determine any weak passwords. Strengthen them/advise users.
+
+Status: Account/Passwd
+-Joe/joeeoj
+
+Other passwords could not be found by john the ripper, indicating that they are somewhat strong passwords.
+
+Resolution: Change policy file to include minimum length and at least 1 each of the following: digit, upper-case character, lower-case character. 
+Install libpam-cracklib package to enable stronger policies.
+Add the following line to /etc/pam.d/common-password: password requisite pam_cracklib.so minlen=6 dcredit=-1 ucredit=-1 lcredit=-1
+----------------------------------------------------------------------

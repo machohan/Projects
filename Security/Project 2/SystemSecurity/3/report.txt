@@ -1,0 +1,13 @@
+Report:
+-Used command 'last' to show list of user logins. 
+-Other than reboot and arnold, there was a user joe who logged in several times on Oct 27. 
+-In order to inspect joe's behavior, viewed command line history of user joe using 'less /home/joe/.bash_history'.
+-Log showed that hacker joe was able to obtain a hashed root password and attempted to unhash it with 'tr'.
+-Joe created symbolic links to /etc/passwd and /etc/shadow named f and g respectively.
+-In addition to that, joe also inspected the cron folders as well as created several files such as j,k, and b.
+-Before shutting down, joe moved cron.daily/backup into cron.hourly
+
+How to remove attacker:
+-Remove user account joe
+-Change passwords for root and other accounts
+-Remove files and links added by hacker joe, particularly in cron directories

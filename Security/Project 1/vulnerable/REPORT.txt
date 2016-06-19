@@ -1,0 +1,106 @@
+--------------------------------------------------------------------
+                              ISSUE 1
+
+Vulnerability: In report(char *user), the input user is not checked or verified to be a valid or safe input. The environment variable USER from which user is extracted can be set using the export command; export USER=value
+
+Exploit a: There is a canonical naming vulnerability in report(char *user) where access to a resource (file) is based on a user input. The user input can canonically modify the pathname in report(char *user) to cat the content of another file in the file system. E.G. “cat /vulnerable/accounts/\../passwords” or “cat /vulnerable/accounts/\../../etc/password”
+ 
+Impact a: CONFITENTIALITY: This exploit would cause confidential information anywhere in a file system to be leaked to unauthorised parties.
+
+Exploit b: One can pass a shell script to the function report(char *user) that will execute via the system() call and using system() in perl script, output can be redirected to hacker's space.
+“cat vulnerability/account/user”
+
+Impact b: CONFIDENTIALITY: Passing the above argument as user to the report function would leak the content of user’s account.
+
+Exploit c: The user input can canonically modify the pathname in report(char *user) and cause the modification of another existing file in the file system. For example, “cat /vulnerable/accounts/../passwords”.
+
+Impact c: INTEGRITY: Content of a file is permanently modified/lost. This can cause denial of service to existing users.
+
+--------------------------------------------------------------------
+                              ISSUE 2
+
+Vulnerability: In addUser(char *user, char *password), the environment variable USER can be changed beforehand by hacker which is then passed to addUser to add another user or login as another user (if you have his/her password i.e from Issue 1 exploit c).
+
+Exploit a: If the USER environment variable is changed then hacker can create another account for himself and so he gets an extra 100 credits.
+
+Impact a: CONFITENTIALITY: Hacker should not be allowed to create another account for himself and get an extra 100 credits.
+
+Exploit b: If the USER environment variable is changed to root and hacker happens to know the passwords of root, then hacker can login as root to the program and perform actions that can be performed by a root user and this could cause a privilege escalation.
+
+Impact b: CONFITENTIALITY: The hacker can access files he is not suppose to.
+INTEGRITY: The hacker can delete or modify critical files and corrupt files.
+AVAILABILITY: The hacker can delete files.
+
+--------------------------------------------------------------------
+							  ISSUE 3
+										
+Vulnerability: In addUser(char * user, char * password), the input password is not checked to be a valid or safe input.
+
+Exploit a: The input password could be a string that contains the password of the intended user in addition to a new user information. E.G. Password = “password\n new_user new_password\n”. 
+
+Impact a: INEGRITY: We are modifying the passwords file and hacker is not authorized to do so.
+
+--------------------------------------------------------------------
+                              ISSUE 4
+							  
+Vulnerability: Buffer overflow in authenticate(char *user, char* password).
+
+Exploit a: Launching a shell: We can change the content of the passwords file to contain an executable code in text format. This executable code will be written to the local buffer u in the stack frame of authenticate() function which in turn can overwrite the return address in the stack frame to point to the executable code in the local buffer u.
+
+Impact a: ACCOUNTABILITY: When a shell such as sh is launched, the hacker gains control of program execution and skips logging his/her actions since logging is done just before exiting main.
+
+CONFITENTIALITY: Once a shell is launched, it can be used to view unauthorized files.
+
+INTEGRITY/AVAILABILITY: With a shell, a hacker can with the right permissions modify/delete existing files.
+
+Exploit b: Overwriting the return address in authenticate() function stack frame to point to a local hack/exploit function can cause all the above violations. This requires the original source file for the program to be modified/replaced by a custom one that looks almost identical except for the hack function.  
+
+Impact b: ACCOUNTABILITY,  CONFITENTIALITY,  INTEGRITY and AVAILABILITY.
+
+--------------------------------------------------------------------
+                              ISSUE 5
+							  
+Vulnerability: Integer Overflow in main() in following segment of code.
+				fromAmount=fromAmount-amount;
+				toAmount=toAmount+amount; //possible integer overflow.
+				setAccount(user,fromAmount);
+				setAccount(argv[3],toAmount);
+
+Exploit a: If the amount we pass is large enough and we’re transferring to an account that we know has a credits near the limit of what can be stored in an int (2,147,483,647) from limits.h, then we cause the target amount to overflow reducing its balance to negative.
+
+Impact a: INTEGRITY: a person’s balance of credits is reduced without his/her permission.
+
+--------------------------------------------------------------------
+                              ISSUE 6
+							  
+Vulnerability: In main, amount is not checked to be a safe input (not negative).
+		fromAmount=fromAmount-amount; //vulnerability here: adding to hacker's account balance.
+		toAmount=toAmount+amount; //subtracting from another user's account.
+		setAccount(user,fromAmount);
+		setAccount(argv[3],toAmount);
+
+Exploit a: A user can add to his balance of credits and subtract from other user simultaneously by using a negative amount when trying to make a transfer.
+ 
+Impact a: INTEGRITY: a target user balance can be reduced by hacker.
+ACCOUNTABILITY: hacker is to transfer credits to his account, something he's not allowed to do.
+
+--------------------------------------------------------------------
+                              ISSUE 7
+							  
+Vulnerability: In main, we have a possible buffer overflow .
+				//transaction[2048];
+				transaction[0]='\0';
+				strncat(transaction,user,2048);
+				strncat(transaction,": ",2048);
+				for(i=1;i<argc;i++){
+					strncat(transaction,argv[i],2048);
+					strncat(transaction," ",2048);
+				}
+
+Exploit a: It is possible to overrun the transaction local buffer to overwrite a return address in the stack frame of main to return to transaction buffer where there is a code that execs a shell.
+
+Impact a: CONFITENTIALITY: The hacker can now display unauthorised information because he has control of root shell. 
+
+INTEGRITY: After an exploit, hacker can execute shell commands that will modify/delete files on the system.
+
+ACCOUNTABILITY: Hacker's actions are not monitored or recorded when above exploit is successfully performed.

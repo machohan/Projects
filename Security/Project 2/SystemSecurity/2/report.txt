@@ -1,0 +1,16 @@
+Our approach:
+-bypass BIOS by deleting nvram - BIOS is no more password protected.
+-change boot order to be booted from CD-ROM first.
+-Insert Ubuntu Server CD and boot from it.
+-Follow steps on screen to launch a shell with root privileges.
+-using adduser command, create another user.
+-using chmod, change permission on shadow and passwd files to 777.
+-boot up machine as normal. Login using newly added user.
+-using scp to copy required files from VM using its IP.
+-Alternatively,ftp software could also be used to copy files.
+
+To prevent:
+-It should be a policy that no one except administrator or authorised employees should have physical access to machine and it should be placed in a locked and secured place.
+-Disable acceptance of all medium on machine by physically customising the machine (i.e must not have cdrom).
+-BIOS must be protected with strong password.
+-BIOS should be modify to disable booting from any medium except only one from where it is secured to be booted.
